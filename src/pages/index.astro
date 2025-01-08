@@ -1,12 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import About from "../components/about.astro";
+import Projects from "../components/projects.astro";
+import Sidecard from "../components/sidecard.astro"
+import Skills from "../components/skills.astro";
+import Experience from "../components/experience.astro";
 ---
 
 <Layout>
-	<h1>Hello, Astro!</h1>
-	<p>Welcome to your new Astro site. You're looking at an Astro page component.</p>
-	<p>Check out the <a href="https://docs.astro.build">Astro documentation</a> to learn more about what you can do with Astro.</p>
+	<About />
+	<Sidecard />
+	<Projects />
+	<Skills />
+	<Experience />
 </Layout>
