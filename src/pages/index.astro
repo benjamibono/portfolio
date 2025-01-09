@@ -1,16 +1,22 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 import About from "../components/about.astro";
 import Projects from "../components/projects.astro";
-import Sidecard from "../components/sidecard.astro"
+import Sidecard from "../components/sidecard.astro";
 import Skills from "../components/skills.astro";
 import Experience from "../components/experience.astro";
 ---
 
 <Layout>
-	<About />
-	<Sidecard />
-	<Projects />
-	<Skills />
-	<Experience />
+  <div class="grid grid-cols-3 gap-6">
+    <div class="col-span-1">
+      <Sidecard />
+      <Skills />
+    </div>
+    <div class="col-span-2">
+      <About />
+      <Projects />
+      <Experience />
+    </div>
+  </div>
 </Layout>
