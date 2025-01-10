@@ -1,0 +1,41 @@
+<div class="flex items-center">
+  <label for="toggle" class="mr-2">Toggle Dark Mode</label>
+  <input type="checkbox" id="toggle" class="toggle-checkbox" />
+</div>
+
+<style>
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary-text-color: white;
+      --secondary-text-color: lightgray;
+      --muted-text-color: #737373;
+      --accent-text-color: lightblue;
+      --background-color: black;
+    }
+  }
+
+  :root[data-theme="light"] {
+    --primary-text-color: black;
+    --secondary-text-color: #737373;
+    --muted-text-color: lightgray;
+    --accent-text-color: #b75ac2;
+    --background-color: white;
+  }
+
+  :root[data-theme="dark"] {
+    --primary-text-color: rgb(24, 18, 18);
+    --secondary-text-color: lightgray;
+    --muted-text-color: #737373;
+    --accent-text-color: lightblue;
+    --background-color: black;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("toggle");
+    toggle.addEventListener("change", () => {
+      document.body.dataset.theme = toggle.checked ? "dark" : "light";
+    });
+  });
+</script>

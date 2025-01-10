@@ -1,24 +1,35 @@
 ---
-import '@fontsource-variable/inter'
+import "@fontsource-variable/inter";
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Benjami Bono</title>
-	</head>
-	<body class="min-h-screen max-w-screen-lg mx-auto px-4 py-8">
-		<slot />
-	</body>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Benjami Bono</title>
+  </head>
+  <body class="min-h-screen max-w-screen-lg mx-auto px-4 py-8">
+    <slot />
+  </body>
 </html>
 
 <style>
-	body {
-		font-family: "Inter Variable", sans-serif, system-ui;
-	}
+  body {
+    font-family: "Inter Variable", sans-serif, system-ui;
+  }
 </style>
+<script>
+  if (
+    localStorage.theme === "dark" ||
+    (!("theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+</script>

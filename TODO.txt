@@ -1,18 +1,12 @@
 TODO LIST:
 
-- Completar projects con los reales
-- Skills Astro, Git, Github, Figma...
-- Enlaces de contacto correctos
 - robots.txt
 - calendario y fechas alineadas
 - Generar textos para: About, Bio, descripciones de proyectos y descripciones de trabajos
 - Imagenes de experiencia reales
-- Imagen de perfil decente
-- quitar ultimo borde en work experience
-- hacer version mobile grid column
-- enseñarselo a Sara para implementar estilos
-- favicon con iniciales o imagen de perfil
 - footer
+- enseñarselo a Sara para implementar estilos
 - dark mode
 - color squeme
-- skills hover
+- Imagen de perfil decente
+- favicon con iniciales o imagen de perfil
