@@ -8,16 +8,14 @@ export default {
             md: '768px',
             lg: '1024px',
             xl: '1280px',
-            '2xl': '1536px',
         },
-        extend: {
-            colors: {
-                primary: 'var(--primary-text-color)',
-                secondary: 'var(--secondary-text-color)',
-                muted: 'var(--muted-text-color)',
-                accent: 'var(--accent-text-color)',
-                background: 'var(--background-color)',
-            },
+        colors: {
+            white: '#fafafa',
+            black: '#0a0a0a',
+            muted: '#e5e5e5',
+            muted1: '#f2f2f2',
+            muted2: '#a3a3a3',
+            muted3: '#262626',
         },
     },
     plugins: [],
