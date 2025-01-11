@@ -46,24 +46,23 @@
 </button>
 
 <script>
-  const theme = localStorage.getItem('theme');
+  const themeSelector = document.getElementById('theme-selector');
+  const html = document.documentElement;
+  const dark = 'dark';
+  const light = 'light';
+  const currentTheme = localStorage.getItem('theme') || dark;
 
-  if (
-    theme === 'dark' ||
-    (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
-  ) {
-    document.documentElement.classList.add('dark');
+  if (currentTheme === dark) {
+    html.classList.add(dark);
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("theme-selector")?.addEventListener("click", () => {
-      if (localStorage.theme === 'dark') {
-        localStorage.theme = 'light';
-        document.documentElement.classList.remove('dark');
-      } else {
-        localStorage.theme = 'dark';
-        document.documentElement.classList.add('dark');
-      }
-    });
+  themeSelector.addEventListener('click', () => {
+    if (html.classList.contains(dark)) {
+      html.classList.remove(dark);
+      localStorage.setItem('theme', light);
+    } else {
+      html.classList.add(dark);
+      localStorage.setItem('theme', dark);
+    }
   });
 </script>
