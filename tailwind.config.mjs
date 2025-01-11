@@ -17,7 +17,9 @@ export default {
             darkgrey: '#171717',
             lighttext: '#737373',
             darktext: '#a3a3a3',
-            pillbg: '#f5f5f5'
+            pillbg: '#f5f5f5',
+            blue: '#0a67c2',
+            purple: '#6e5494',
         },
     },
     plugins: [],
