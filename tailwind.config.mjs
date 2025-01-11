@@ -20,6 +20,7 @@ export default {
             pillbg: '#f5f5f5',
             blue: '#0a67c2',
             purple: '#6e5494',
+            granate: '#7a1414'
         },
     },
     plugins: [],
