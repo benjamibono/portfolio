@@ -12,10 +12,12 @@ export default {
         colors: {
             white: '#fafafa',
             black: '#0a0a0a',
-            muted: '#e5e5e5',
-            muted1: '#f2f2f2',
-            muted2: '#a3a3a3',
-            muted3: '#262626',
+            border: '#e5e5e5',
+            darkborder:'#262626',
+            darkgrey: '#171717',
+            lighttext: '#737373',
+            darktext: '#a3a3a3',
+            pillbg: '#f5f5f5'
         },
     },
     plugins: [],
