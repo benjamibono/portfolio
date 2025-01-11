@@ -46,18 +46,23 @@
 </button>
 
 <script>
-  if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-    document.documentElement.classList.add("dark");
-  } else {
-    document.documentElement.classList.remove("dark");
-  }
-  document.getElementById("theme-selector")?.addEventListener("click", () => {
-    if (localStorage.theme === "dark") {
-      localStorage.theme = "light";
-      document.documentElement.classList.remove("dark");
-    } else {
-      localStorage.theme = "dark";
+  document.addEventListener("DOMContentLoaded", () => {
+    // Verifica el tema almacenado en localStorage o el esquema de color preferido del sistema
+    if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
       document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
     }
+
+    // Agrega un evento de clic al botón para alternar entre los temas
+    document.getElementById("theme-selector")?.addEventListener("click", () => {
+      if (localStorage.theme === "dark") {
+        localStorage.theme = "light";
+        document.documentElement.classList.remove("dark");
+      } else {
+        localStorage.theme = "dark";
+        document.documentElement.classList.add("dark");
+      }
+    });
   });
 </script>
