@@ -1,0 +1,58 @@
+<button
+  type="button"
+  id="theme-selector"
+  class="border w-10 h-10 border-border dark:bg-darkborder dark:border-darkborder rounded-lg dark:hover:bg-darkgrey dark:hover:border-darkgrey hover:bg-border transition duration-500"
+>
+  <span class="sr-only"
+    >Enable <span class="dark:hidden">light</span><span
+      class="hidden dark:inline">dark</span
+    > mode</span
+  >
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="icon icon-tabler icons-tabler-outline icon-tabler-moon-stars hidden dark:inline dark:text-white"
+    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+      d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+    ></path><path
+      d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
+    ></path><path d="M19 11h2m-1 -1v2"></path></svg
+  >
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="icon icon-tabler icons-tabler-outline icon-tabler-brightness-up dark:hidden inline"
+    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+      d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M12 5l0 -2"
+    ></path><path d="M17 7l1.4 -1.4"></path><path d="M19 12l2 0"></path><path
+      d="M17 17l1.4 1.4"></path><path d="M12 19l0 2"></path><path
+      d="M7 17l-1.4 1.4"></path><path d="M6 12l-2 0"></path><path
+      d="M7 7l-1.4 -1.4"></path></svg
+  >
+</button>
+
+<script>
+  document.getElementById("theme-selector")?.addEventListener("click", () => {
+    if (localStorage.theme === "dark") {
+      localStorage.theme = "light";
+      document.documentElement.classList.remove("dark");
+    } else {
+      localStorage.theme = "dark";
+      document.documentElement.classList.add("dark");
+    }
+  });
+</script>
