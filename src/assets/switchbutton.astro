@@ -46,34 +46,24 @@
 </button>
 
 <script>
-  // Función para configurar el modo oscuro o claro
-  function applyTheme(theme) {
-    const html = document.documentElement;
-    if (theme === "dark") {
-      html.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      html.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
+  const theme = localStorage.getItem('theme');
+
+  if (
+    theme === 'dark' ||
+    (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+  ) {
+    document.documentElement.classList.add('dark');
   }
 
-  // Configuración inicial al cargar
   document.addEventListener("DOMContentLoaded", () => {
-    const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-
-    // Aplica el tema basado en preferencia o configuración previa
-    applyTheme(savedTheme || (prefersDark ? "dark" : "light"));
-
-    // Añade evento al botón
     document.getElementById("theme-selector")?.addEventListener("click", () => {
-      const currentTheme = document.documentElement.classList.contains("dark")
-        ? "dark"
-        : "light";
-      applyTheme(currentTheme === "dark" ? "light" : "dark");
+      if (localStorage.theme === 'dark') {
+        localStorage.theme = 'light';
+        document.documentElement.classList.remove('dark');
+      } else {
+        localStorage.theme = 'dark';
+        document.documentElement.classList.add('dark');
+      }
     });
   });
 </script>
