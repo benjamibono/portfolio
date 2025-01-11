@@ -1,9 +1,11 @@
-<div class="rounded-lg border-muted3 border shadow-sm p-6 pt-6 bg-white dark:bg-black">
+<div
+  class="rounded-lg border-muted3 border border-border dark:border-darkborder shadow-sm p-6 pt-6 bg-white dark:bg-black"
+>
   <div
     class="flex flex-row md:flex-col items-center md:items-start w-full gap-4"
   >
     <img
-      class="rounded-full size-12 h-64 w-64 object-cover border-2 mx-auto"
+      class="rounded-full size-12 h-64 w-64 object-cover border-2 mx-auto border-border dark:border-darkborder"
       src="/me.webp"
       alt="Benjami's Profile Picture"
     />
@@ -13,61 +15,28 @@
       >
         Benjami Bono
       </h1>
-      <p class="text-sm md:text-base text-gray-500 dark:text-slate-400">
+      <p class="text-sm md:text-base text-lighttext dark:text-darktext">
         Front End Developer
       </p>
-      <p class="mt-2 text-start text-sm text-gray-500 dark:text-slate-400">
+      <p class="mt-2 text-start text-sm text-lighttext dark:text-darktext">
         Hard Smart Worker Developer always focused on learning
       </p>
       <div class="mt-2">
         <a href="/CV.pdf">
           <button
-            class="border rounded-lg border-muted3 text-white bg-black py-2 px-4 transition duration-500 hover:bg-gray-800"
+            class=" border rounded-lg text-white dark:text-darkgrey bg-black dark:bg-white py-2 px-6 transition duration-500 hover:bg-darkborder hover:dark:bg-[#ffffff]"
             >CV</button
           ></a
         >
         <a href="mailto:benjamibono@gmail.com">
           <button
-            class="border rounded-lg border-muted3 text-white bg-black py-2 px-4 transition duration-500 hover:bg-gray-800"
+            class=" border rounded-lg text-white dark:text-darkgrey bg-black dark:bg-white py-2 px-6 transition duration-500 hover:bg-darkborder hover:dark:bg-[#ffffff]"
             >CONTACT ME</button
           ></a
         >
-        <button type="button" id="theme-selector">
-          <span class="sr-only"
-            >Enable <span class="dark:hidden">light</span><span
-              class="hidden dark:inline">dark</span
-            > mode</span
-          >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github hidden dark:inline"
-            ><path d="M0 0h24v24H0z" stroke="none"></path><path
-              d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"
-            ></path></svg
-          >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github dark:hidden"
-            ><path d="M0 0h24v24H0z" stroke="none"></path><path
-              d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"
-            ></path></svg
-          >
-        </button>
-        <div class="mt-4 flex flex-col space-y-2 border-t pt-4 w-full">
+        <div
+          class="mt-4 flex flex-col space-y-2 border-t pt-4 w-full border-border dark:border-darkborder"
+        >
           <a
             class="flex space-x-2"
             href="https://github.com/benjamibono"
@@ -79,17 +48,17 @@
               width="24"
               height="24"
               fill="none"
-              stroke="white"
+              stroke="CurrentColor"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github text-black dark:text-white"
               ><path d="M0 0h24v24H0z" stroke="none"></path><path
                 d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"
               ></path></svg
             >
             <span
-              class="text-sm text-gray-500 hover:text-black dark:hover:text-white transition duration-500"
+              class="text-sm text-lighttext dark:text-darktext hover:text-black dark:hover:text-white transition duration-500"
               >/benjamibono</span
             ></a
           >
@@ -99,17 +68,17 @@
               width="24"
               height="24"
               fill="none"
-              stroke="white"
+              stroke="CurrentColor"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github text-black dark:text-white"
               ><path d="M0 0h24v24H0z" stroke="none"></path><path
                 d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"
               ></path></svg
             >
             <span
-              class="text-sm text-gray-500 hover:text-black dark:hover:text-white transition duration-500"
+              class="text-sm text-lighttext dark:text-darktext hover:text-black dark:hover:text-white transition duration-500"
               >/benjamibono</span
             ></a
           >
@@ -119,17 +88,17 @@
               width="24"
               height="24"
               fill="none"
-              stroke="white"
+              stroke="currentColor"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github text-black dark:text-white"
               ><path d="M0 0h24v24H0z" stroke="none"></path><path
                 d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"
               ></path></svg
             >
             <span
-              class="text-sm text-gray-500 hover:text-black dark:hover:text-white transition duration-500"
+              class="text-sm text-lighttext dark:text-darktext hover:text-black dark:hover:text-white transition duration-500"
               >/benjamibono</span
             ></a
           >
@@ -138,15 +107,6 @@
     </div>
   </div>
   <script>
-    document.getElementById("theme-selector")?.addEventListener("click", () => {
-      if (localStorage.theme === "dark") {
-        localStorage.theme = "light";
-        document.documentElement.classList.remove("dark");
-      } else {
-        localStorage.theme = "dark";
-        document.documentElement.classList.add("dark");
-      }
-    });
     document
       .querySelector('a[href="/CV.pdf"]')
       .setAttribute("download", "CV.pdf");
