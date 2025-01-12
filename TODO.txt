@@ -1,11 +1,6 @@
 TODO LIST:
 
-- robots.txt
-- Generar textos para: descripciones de proyectos y descripciones de trabajos
-- Imagenes de experiencia reales
-- footer
-- enseñarselo a Sara para implementar estilos
-- color squeme
+- color scueme
 - Imagen de perfil decente / memoji
-- favicon con iniciales o imagen de perfil
-- añadir idiomas?
+- accesibilidad (aria-label)
+- SEO (meta tags) description, title, keywords 
