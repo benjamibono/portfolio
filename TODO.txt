@@ -4,3 +4,5 @@ TODO LIST:
 - Imagen de perfil decente / memoji
 - accesibilidad (aria-label)
 - SEO (meta tags) description, title, keywords 
+- modals
+- blendy
