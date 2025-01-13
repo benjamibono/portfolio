@@ -42,3 +42,6 @@ astro.config.mjs
 
 # Ignore robots.txt
 robots.txt
+
+# Ignore aboutme.astro from pages
+src/pages/aboutme.astro
