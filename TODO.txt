@@ -1,6 +1,5 @@
 TODO LIST:
 
-- color scueme
 - Imagen de perfil decente / memoji
 - accesibilidad (aria-label)
 - SEO (meta tags) description, title, keywords 
