@@ -1,0 +1,65 @@
+---
+import type { Project } from '../types/Project';
+import ExternalLink from './icons/ExternalLink.astro';
+
+interface Props {
+  project: Project;
+  index: number;
+}
+
+const { project, index } = Astro.props;
+---
+
+<div
+  class="p-6 pt-6 h-full rounded-lg border shadow-sm border-border dark:border-darkborder hover-card fade-in"
+  style={`animation-delay: ${index * 100}ms`}
+>
+  <a
+    class="font-semibold text-darkgrey dark:text-white hover:underline focus-ring rounded"
+    href={project.url}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={`Ver proyecto ${project.title}`}
+  >
+    {project.title}
+    {
+      project.isComingSoon && (
+        <span class="ml-2 text-xs text-lighttext dark:text-darktext"></span>
+      )
+    }
+  </a>
+
+  <p class="text-sm text-lighttext dark:text-darktext mt-1">
+    {project.description}
+  </p>
+
+  <div class="flex items-center justify-between mt-4">
+    <div class="flex items-center space-x-2">
+      <div
+        class={`size-3 rounded-full ${
+          project.technologies.includes('Next.js')
+            ? 'bg-black dark:bg-border'
+            : 'bg-gradient-to-r from-granate to-lightblue'
+        }`}
+        aria-hidden="true"
+      >
+      </div>
+      <span class="text-xs font-normal text-lighttext dark:text-darktext">
+        {project.technologies.join(' & ')}
+      </span>
+    </div>
+
+    <a
+      class="text-sm text-darkgrey dark:text-white hover:underline inline-flex items-center focus-ring rounded px-2 py-1"
+      href={project.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Visitar proyecto ${project.title}`}
+    >
+      <span>Visit Project</span>
+      <ExternalLink />
+      <span class="sr-only">Abrir en nueva pestaña</span>
+    </a>
+  </div>
+</div>
+
