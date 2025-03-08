@@ -23,9 +23,7 @@ import profileImage from '../assets/images/me.webp';
             <h1 class="font-bold md:mt-4 text-xl md:text-2xl text-black dark:text-white">
               Benjami Bono
             </h1>
-            <p class="text-sm md:text-base text-lighttext dark:text-darktext">
-              Front End Developer
-            </p>
+            <p class="text-sm md:text-base text-lighttext dark:text-darktext">Software Developer</p>
           </div>
         </div>
         <div class="relative inline-block text-left">
@@ -33,19 +31,20 @@ import profileImage from '../assets/images/me.webp';
         </div>
       </div>
       <p class="my-4 text-start text-sm text-lighttext dark:text-darktext text-balance">
-        Web developer driven by smart problem-solving, rapid learning, and staying ahead in web
-        technologies.
+        +2 years crafting modern websites and dynamic UIs. Self-taught professional passionate about
+        clean code and team collaboration.
       </p>
     </div>
-    <div class="mt-2">
-      <a aria-label="Download Resume Button" href="/CV.pdf">
+    <div class="mt-2 flex flex-row gap-2">
+      <a aria-label="Download Resume Button" href="/CV.pdf" class="flex-1">
         <button
           aria-label="Download Resume Button"
-          class="align-bottom font-semibold border rounded-lg text-white dark:text-darkgrey bg-black dark:bg-white py-2 px-6 transition duration-500 hover:bg-darkborder hover:dark:bg-[#ffffff]"
-          ><svg
+          class="w-full font-semibold border rounded-lg text-white dark:text-darkgrey bg-black dark:bg-white py-2 px-6 transition duration-500 hover:bg-darkborder hover:dark:bg-[#ffffff] flex items-center justify-center gap-2"
+        >
+          <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            width="20"
+            height="20"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -53,99 +52,120 @@ import profileImage from '../assets/images/me.webp';
             stroke-linecap="round"
             stroke-linejoin="round"
             class="icon icon-tabler icons-tabler-outline icon-tabler-file-cv text-white dark:text-darkgrey"
-            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-              d="M14 3v4a1 1 0 0 0 1 1h4"></path><path
-              d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
-            ></path><path d="M11 12.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0"></path><path
-              d="M13 11l1.5 6l1.5 -6"></path></svg
-          ></button
-        ></a
-      >
-      <a href="mailto:benjamibono@gmail.com" aria-label="Contact Benjami via Email">
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+            <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
+            <path d="M11 12.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0"></path>
+            <path d="M13 11l1.5 6l1.5 -6"></path>
+          </svg>
+          
+        </button>
+      </a>
+      <a href="mailto:benjamibono@gmail.com" aria-label="Contact Benjami via Email" class="flex-1">
         <button
           aria-label="Contact Benjami via Email"
-          class="font-semibold border rounded-lg text-white dark:text-darkgrey bg-black dark:bg-white py-2 px-6 transition duration-500 hover:bg-darkborder hover:dark:bg-[#ffffff]"
-          >CONTACT ME</button
+          class="w-full font-semibold border rounded-lg text-white dark:text-darkgrey bg-black dark:bg-white py-2 px-6 transition duration-500 hover:bg-darkborder hover:dark:bg-[#ffffff] flex items-center justify-center gap-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-mail"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
+            ></path>
+            <path d="M3 7l9 6l9 -6"></path>
+          </svg>
+          
+        </button>
+      </a>
+    </div>
+    <div
+      class="mt-4 flex flex-col space-y-2 border-t pt-4 w-full border-border dark:border-darkborder"
+    >
+      <a
+        class="flex space-x-2"
+        href="https://github.com/benjamibono"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="none"
+          stroke="CurrentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github text-black dark:text-white hover:text-purple"
+          ><path d="M0 0h24v24H0z" stroke="none"></path><path
+            d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"
+          ></path></svg
+        >
+        <span
+          class="font-semibold text-sm text-lighttext dark:text-darktext hover:text-purple dark:hover:text-white transition duration-500"
+          >View My Projects</span
         ></a
       >
-      <div
-        class="mt-4 flex flex-col space-y-2 border-t pt-4 w-full border-border dark:border-darkborder"
+      <a class="flex space-x-2" href="https://www.linkedin.com/in/benjamibono/">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin text-black dark:text-white hover:text-blue"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M8 11v5"></path><path
+            d="M8 8v.01"></path><path d="M12 16v-5"></path><path d="M16 16v-3a2 2 0 1 0 -4 0"
+          ></path><path
+            d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"
+          ></path></svg
+        >
+        <span
+          class="font-semibold text-sm text-lighttext dark:text-darktext hover:text-blue dark:hover:text-white transition duration-500"
+          >Professional Profile</span
+        ></a
       >
-        <a
-          class="flex space-x-2"
-          href="https://github.com/benjamibono"
-          target="_blank"
-          rel="noopener noreferrer"
+      <a
+        class="flex space-x-2"
+        href="https://wa.me/+34622909070"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp text-black dark:text-white hover:text-green"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M3 21l1.65 -4.65a8 8 0 1 1 2.85 2.85l-4.65 1.65"></path><path
+            d="M9 10a3.5 3.5 0 0 0 5 5m.5 -2.5a3.5 3.5 0 0 0 -3 -3"></path></svg
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            stroke="CurrentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github text-black dark:text-white hover:text-purple"
-            ><path d="M0 0h24v24H0z" stroke="none"></path><path
-              d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"
-            ></path></svg
-          >
-          <span
-            class="font-semibold text-sm text-lighttext dark:text-darktext hover:text-purple dark:hover:text-white transition duration-500"
-            >Let's code!</span
-          ></a
-        >
-        <a class="flex space-x-2" href="https://www.linkedin.com/in/benjamibono/">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin text-black dark:text-white hover:text-blue"
-            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M8 11v5"></path><path
-              d="M8 8v.01"></path><path d="M12 16v-5"></path><path d="M16 16v-3a2 2 0 1 0 -4 0"
-            ></path><path
-              d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"
-            ></path></svg
-          >
-          <span
-            class="font-semibold text-sm text-lighttext dark:text-darktext hover:text-blue dark:hover:text-white transition duration-500"
-            >Networking!</span
-          ></a
-        >
-        <a
-          class="flex space-x-2"
-          href="https://wa.me/+34622909070"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp text-black dark:text-white hover:text-green"
-            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-              d="M3 21l1.65 -4.65a8 8 0 1 1 2.85 2.85l-4.65 1.65"></path><path
-              d="M9 10a3.5 3.5 0 0 0 5 5m.5 -2.5a3.5 3.5 0 0 0 -3 -3"></path></svg
-          >
-          <span
-            class="font-semibold text-sm text-lighttext dark:text-darktext hover:text-green dark:hover:text-white transition duration-500"
-            >Message Me!</span
-          ></a
-        >
-      </div>
+        <span
+          class="font-semibold text-sm text-lighttext dark:text-darktext hover:text-green dark:hover:text-white transition duration-500"
+          >Quick Chat</span
+        ></a
+      >
     </div>
   </div>
 </div>

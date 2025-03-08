@@ -11,7 +11,7 @@ export const projects: Project[] = [
   {
     title: "Dental Barcelo",
     description:
-      "Designed a new website for a dental clinic to showcase services.",
+      "Designed a new website for a dental clinic to showcase their services.",
     url: "https://www.dentalbarcelo.com/",
     technologies: ["Astro", "Tailwind"],
   },
