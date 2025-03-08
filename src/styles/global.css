@@ -9,6 +9,7 @@
 
   body {
     @apply bg-white dark:bg-black text-darkgrey dark:text-white transition-colors duration-300;
+    font-family: 'Inter Variable', sans-serif, system-ui;
   }
 }
 
