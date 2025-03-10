@@ -46,23 +46,28 @@
 </button>
 
 <script>
-  const themeSelector = document.getElementById('theme-selector');
-  const html = document.documentElement;
-  const dark = 'dark';
-  const light = 'light';
-  const currentTheme = localStorage.getItem('theme') || dark;
-
-  if (currentTheme === dark) {
-    html.classList.add(dark);
-  }
-
-  themeSelector.addEventListener('click', () => {
-    if (html.classList.contains(dark)) {
-      html.classList.remove(dark);
-      localStorage.setItem('theme', light);
+  const themeToggle = document.getElementById('theme-selector');
+  
+  // Function to update theme
+  const updateTheme = (theme) => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
     } else {
-      html.classList.add(dark);
-      localStorage.setItem('theme', dark);
+      document.documentElement.classList.remove('dark');
+    }
+    localStorage.setItem('theme', theme);
+  };
+
+  // Toggle theme on button click
+  themeToggle?.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.contains('dark');
+    updateTheme(isDark ? 'light' : 'dark');
+  });
+
+  // Listen for system theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+      updateTheme(e.matches ? 'dark' : 'light');
     }
   });
 </script>

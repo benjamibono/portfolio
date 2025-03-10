@@ -22,11 +22,7 @@ const { project, index } = Astro.props;
     aria-label={`Ver proyecto ${project.title}`}
   >
     {project.title}
-    {
-      project.isComingSoon && (
-        <span class="ml-2 text-xs text-lighttext dark:text-darktext"></span>
-      )
-    }
+    {project.isComingSoon && <span class="ml-2 text-xs text-lighttext dark:text-darktext" />}
   </a>
 
   <p class="text-sm text-lighttext dark:text-darktext mt-1">
@@ -38,8 +34,12 @@ const { project, index } = Astro.props;
       <div
         class={`size-3 rounded-full ${
           project.technologies.includes('Next.js')
-            ? 'bg-black dark:bg-border'
-            : 'bg-gradient-to-r from-granate to-lightblue'
+            ? 'bg-black dark:bg-white'
+            : project.technologies.includes('React')
+              ? 'bg-lightblue'
+              : project.technologies.includes('Astro')
+                ? 'bg-gradient-to-r from-granate to-lightblue'
+                : 'bg-lightblue'
         }`}
         aria-hidden="true"
       >
@@ -54,12 +54,11 @@ const { project, index } = Astro.props;
       href={project.url}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={`Visitar proyecto ${project.title}`}
+      aria-label={`Visit project ${project.title}`}
     >
-      <span>Visit Project</span>
+      <span>{project.isComingSoon ? 'Coming Soon' : 'Visit Project'}</span>
       <ExternalLink />
-      <span class="sr-only">Abrir en nueva pestaña</span>
+      <span class="sr-only">Open in new tab</span>
     </a>
   </div>
 </div>
-

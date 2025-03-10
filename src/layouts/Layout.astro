@@ -5,7 +5,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -16,6 +16,28 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <SEO title={title} />
+    <script is:inline>
+      // Check for saved theme preference, otherwise use system preference
+      const theme = (() => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark';
+        }
+        return 'light';
+      })();
+
+      // Apply theme immediately to prevent flash
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+
+      // Save the theme preference
+      localStorage.setItem('theme', theme);
+    </script>
   </head>
   <body class="min-h-screen max-w-screen-lg mx-auto px-4 py-8 bg-[#fafafa] dark:bg-[#0a0a0a]">
     <slot />

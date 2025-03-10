@@ -1,12 +1,201 @@
-<div
-  class="pt-6 min-h-screen mx-auto px-20 py-8 bg-[#fafafa] dark:bg-[#0a0a0a]"
->
-  <h2 class="text-xl font-bold mb-4 text-black dark:text-white">
-    More About Me
-  </h2>
-  <div
-    class="space-y-8 border shadow-sm rounded-lg border-border dark:border-darkborder p-6"
-  >
-  
+---
+import Layout from '../layouts/Layout.astro';
+import Sidecard from '../components/sidecard.astro';
+import Skills from '../components/skills.astro';
+import Softskills from '../components/softskills.astro';
+---
+
+<Layout title="About Me - Benjami Bono">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="md:col-span-1">
+      <Sidecard />
+      <Skills />
+      <Softskills />
+    </div>
+    <div class="md:col-span-2">
+      <div class="space-y-6">
+        <div
+          class="rounded-lg border border-border dark:border-darkborder shadow-sm bg-white dark:bg-black"
+        >
+          <div class="space-y-1.5 p-6 flex flex-row justify-between items-baseline">
+            <h1
+              class="text-2xl font-semibold leading-none tracking-tight text-black dark:text-white"
+            >
+              🌟 My Journey 
+            </h1>
+            <a
+              href="/"
+              class="text-sm text-lighttext dark:text-darktext hover:underline focus-ring rounded inline-flex items-center"
+              aria-label="Back to homepage"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="mr-2"
+              >
+                <path d="m12 19-7-7 7-7"></path>
+                <path d="M19 12H5"></path>
+              </svg>
+              Back to Portfolio
+            </a>
+          </div>
+          <div class="p-6 pt-0">
+            <div class="space-y-6 text-lighttext dark:text-darktext font-light text-balance">
+              <h2 class="text-xl font-semibold text-black dark:text-white">Beginnings 🌱</h2>
+              <p>
+                From an early age, I was identified as having high IQ, but in my hometown,
+                opportunities were very limited. I was an excellent student in high school, but upon
+                graduating, I felt lost and directionless, with no one to guide me. Facing
+                uncertainty and limited opportunities in my city, I decided to try my luck in
+                Switzerland, where my father had been living, working, and happily married (now a
+                Swiss citizen) for years.
+              </p>
+              <p>
+                I felt it was where I belonged: security, opportunities, spectacular landscapes, and
+                gorgeous cities. I fell in love with snowboarding and, above all, with the culture
+                of work, effort, and social life, where others are respected and cared for. However,
+                I needed a degree and something to dedicate myself to. At that time, I didn't master
+                German well, and although I worked as an au pair and in temporary employment, I
+                wouldn't be able to fulfill myself or prosper professionally.
+              </p>
+              <p>
+                I returned to Spain and studied Business Administration and Finance, but I didn't
+                feel fulfilled with it. I also tried Economics and E-commerce, searching for
+                direction, but I still hadn't found my passion. It was during this time that I began
+                to shape my professional path through hands-on experience.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="rounded-lg border border-border dark:border-darkborder shadow-sm bg-white dark:bg-black"
+        >
+          <div class="p-6">
+            <div class="space-y-6 text-lighttext dark:text-darktext font-light text-balance">
+              <h2 class="text-xl font-semibold text-black dark:text-white">
+                Professional Growth 📈
+              </h2>
+              <p>
+                At that point, I considered returning to Switzerland, but I needed money. I didn't
+                want to depend on anyone in Spain or Switzerland, so I entered the hospitality
+                industry. During the probation period, I was already made permanent, and within
+                months, I went from being a delivery driver to managing the largest store in the
+                area. It soon became the most profitable store in the country.
+              </p>
+              <p>
+                After achieving this, a family contact offered me a position at a dental clinic.
+                They needed an aesthetic renovation, a website, an inventory system, better
+                organization of materials, schedules, patient appointments, billing, and files, all
+                with a very limited budget. It was a huge challenge for someone so young, but I knew
+                I was capable. They told me they needed someone disciplined, organized, resourceful,
+                and charismatic, so I accepted.
+              </p>
+              <p>
+                Until March 2025, when I trained my successor, the clinic went from being in the
+                red, with long waiting times, worker dissatisfaction, and organizational chaos, to
+                having full schedules three weeks in advance, a 5/5 rating on Google, up-to-date
+                invoices, higher net profits, a renewed image, a custom website, and new
+                organization methods to ensure its long-term operation. We made it!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="rounded-lg border border-border dark:border-darkborder shadow-sm bg-white dark:bg-black"
+        >
+          <div class="p-6">
+            <div class="space-y-6 text-lighttext dark:text-darktext font-light text-balance">
+              <h2 class="text-xl font-semibold text-black dark:text-white">
+                Discovery of Programming 💻
+              </h2>
+              <p>
+                Although I started learning programming out of curiosity, in April 2020 I began
+                accepting projects to supplement my income from hospitality and the clinic. I worked
+                on it on weekends and holidays, and there I discovered my passion: time flew by, I
+                created useful things for people, and they valued my work.
+              </p>
+              <p>
+                I started with Python, then HTML/CSS/JS, and later React, TypeScript, and Tailwind.
+                I learned SQL, Git, Node.js, Next.js, Figma, and Docker. Each new technology was a
+                challenge that motivated me to give my best and reach my full potential. I'm
+                self-taught: I used Codecademy and YouTube for theory, and Scrimba and LeetCode for
+                practice.
+              </p>
+              <p>
+                Today, I'm at my best moment. I'm not a master yet, but with current tools and AI, I
+                learn and create much faster. Problems that used to take me weeks now take days with
+                planning and study. My technical portfolio includes both public projects on GitHub
+                and private work for government and private entities.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="rounded-lg border border-border dark:border-darkborder shadow-sm bg-white dark:bg-black"
+        >
+          <div class="p-6">
+            <div class="space-y-6 text-lighttext dark:text-darktext font-light text-balance">
+              <h2 class="text-xl font-semibold text-black dark:text-white">
+                Skills & Languages 🌍
+              </h2>
+              <p>
+                My multilingual abilities set me apart: I'm fluent in Spanish, Catalan, and English,
+                with B1+ proficiency in French and German, though the latter is my priority as it's
+                the language of business and key to my career. This linguistic diversity, combined
+                with strong communication skills, enables effective collaboration in international
+                environments.
+              </p>
+              <p>
+                I've always been good at communication, my charisma and extroversion, and my passion
+                for reading have led me to leadership roles in sports, studies, and work. Beyond
+                technical expertise, I bring a relentless drive for learning and problem-solving. My
+                experience in leadership roles has honed my ability to inspire and guide teams and
+                colleagues toward success. I thrive in challenging environments and maintain a
+                disciplined approach to achieving goals.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="rounded-lg border border-border dark:border-darkborder shadow-sm bg-white dark:bg-black"
+        >
+          <div class="p-6">
+            <div class="space-y-6 text-lighttext dark:text-darktext font-light text-balance">
+              <h2 class="text-xl font-semibold text-black dark:text-white">Why Switzerland 🏔️</h2>
+              <p>
+                I'm in Switzerland because I fit in with the culture and work environment. I want to
+                start a family with my partner and, like my father, become a Swiss citizen after
+                much effort. In this country, opportunities are abundant, and nature is always
+                nearby.
+              </p>
+              <p>
+                I'm now ready to contribute to innovative projects in a dynamic environment. My
+                commitment to continuous growth drives me to expand my expertise in full-stack
+                development, whether through mastering new programming languages, optimizing system
+                architecture, or enhancing user experiences.
+              </p>
+              <p>
+                I've always succeeded in what I set out to do: sports, studies, work. I just need an
+                opportunity to maximize my talent: discipline and ambition. I'm prepared for
+                immediate relocation and welcome on-site opportunities. My track record of success
+                in diverse roles, combined with my technical skills and cultural adaptability,
+                positions me to make immediate and lasting contributions to any team.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</Layout>
