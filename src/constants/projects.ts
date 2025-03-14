@@ -30,11 +30,18 @@ export const projects: Project[] = [
     technologies: ['Astro', 'Tailwind'],
   },
   {
+    title: 'NexBuy Ecommerce',
+    description:
+      '⚠️ Work in progress: Modern e-commerce platform with product catalog, advanced search, secure payments and user management.',
+    url: 'https://ecom-mockup.vercel.app/',
+    technologies: ['Next.js'],
+  },
+  {
     title: 'Nexus Corporate',
-    description: 'Modern corporate website mockup with sleek animations and responsive design.',
-    url: '/coming-soon',
+    description:
+      '⚠️ Work in progress: Modern corporate website mockup with sleek animations and responsive design.',
+    url: 'https://nexus-app-gray.vercel.app/',
     technologies: ['React & Tailwind'],
-    isComingSoon: true,
   },
   {
     title: 'HomeCraft Social',
@@ -52,12 +59,12 @@ export const projects: Project[] = [
     technologies: ['Next.js'],
     isComingSoon: true,
   },
-  {
-    title: 'Movie Match',
-    description:
-      "A fun and interactive movie selector app that helps you decide what to watch. Swipe right and left and match with friends to find the perfect movie night pick!",
-    url: '/coming-soon',
-    technologies: ['Next.js'],
-    isComingSoon: true,
-  },
+  // {
+  //   title: 'Movie Match',
+  //   description:
+  //     "A fun and interactive movie selector app that helps you decide what to watch. Swipe right and left and match with friends to find the perfect movie night pick!",
+  //   url: '/coming-soon',
+  //   technologies: ['Next.js'],
+  //   isComingSoon: true,
+  // },
 ];
