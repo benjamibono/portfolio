@@ -1,64 +1,81 @@
-# Portfolio
+# Benjami Bono - Personal Portfolio
 
-This is a personal portfolio website showcasing my projects and work experience.
+A modern, responsive portfolio website showcasing my journey from business leadership to full-stack development. Built with Astro and Tailwind CSS for optimal performance and user experience.
 
-## Table of Contents
+## 🌟 Features
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Setup](#setup)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- **Lightning Fast**: Built with Astro for optimal performance
+- **Responsive Design**: Seamless experience across all devices
+- **Modern UI**: Clean and professional interface
+- **Dark Mode**: Comfortable viewing experience in any lighting
+- **Project Showcase**: Highlighting key web development projects
+- **Interactive Elements**: Smooth animations and transitions
+- **SEO Optimized**: Built with search engines in mind
 
-## Introduction
+## 🛠️ Tech Stack
 
-This portfolio website is designed to highlight my skills, projects, and professional experience. It includes sections for work experience, projects, and contact information.
+- **Framework**: Astro
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Heroicons
+- **Deployment**: Vercel
 
-## Features
-
-- Responsive design
-- Dark mode support
-- Project showcase with links
-- Work experience timeline
-- Contact form
-
-## Technologies Used
-
-- Astro
-- Tailwind CSS
-- JavaScript
-- HTML
-- CSS
-
-## Setup
-
-To set up the project locally, follow these steps:
+## 🚀 Getting Started
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/portfolio.git
 
-  2. Navigate to the project directory:
-    ```bash
-    cd portfolio
-    ```
+```bash
+git clone https://github.com/yourusername/portfolio.git
+```
 
-  3. Install dependencies:
-    ```bash
-    npm install
-    ```
+2. Install dependencies:
 
-  ## Usage
+```bash
+npm install
+```
 
-  To run the project locally, use the following command:
-    ```bash
-    npm start
-    ```
+3. Start the development server:
 
-  This will start a local development server. Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to view the website.
+```bash
+npm run dev
+```
 
-  ## Contributing
+4. Build for production:
 
-  Contributions are welcome! If you have any suggestions or improvements, please create an issue or submit a pull request.
+```bash
+npm run build
+```
+
+## 📦 Project Structure
+
+```
+portfolio/
+├── public/
+├── src/
+│   ├── components/
+│   ├── layouts/
+│   └── pages/
+├── astro.config.mjs
+├── package.json
+└── tailwind.config.mjs
+```
+
+## 🔧 Configuration
+
+The project uses:
+
+- `astro.config.mjs` for Astro configuration
+- `tailwind.config.mjs` for Tailwind CSS customization
+- `package.json` for project dependencies and scripts
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Contact
+
+Feel free to reach out for collaborations or questions:
+
+- Portfolio: [benjamibono.com](https://benjamibono.com)
+- LinkedIn: [Benjami Bono](https://linkedin.com/in/benjamibono)
+- GitHub: [@benjamibono](https://github.com/benjamibono)
