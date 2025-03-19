@@ -1,73 +1,84 @@
 <button
   type="button"
   id="theme-selector"
-  class="border w-10 h-10 border-border dark:bg-darkborder dark:border-darkborder rounded-lg dark:hover:bg-darkgrey dark:hover:border-darkgrey hover:bg-border transition duration-500"
+  class="theme-toggle border w-10 h-10 border-border dark:border-darkborder rounded-lg hover:bg-border dark:hover:bg-darkgrey dark:hover:border-darkgrey transition duration-500 flex items-center justify-center"
+  aria-label="Toggle theme"
+  data-theme-toggle
+  style="--theme-toggle-duration: 0.1s; --theme-toggle-ease: cubic-bezier(0.16, 1, 0.3, 1)"
 >
-  <span class="sr-only"
-    >Enable <span class="dark:hidden">light</span><span
-      class="hidden dark:inline">dark</span
-    > mode</span
-  >
+  <span class="sr-only">Toggle theme</span>
   <svg
     xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
     width="20"
     height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="1"
+    fill="currentColor"
     stroke-linecap="round"
-    stroke-linejoin="round"
-    class="icon icon-tabler icons-tabler-outline icon-tabler-moon-stars hidden dark:inline dark:text-white"
-    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-      d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
-    ></path><path
-      d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
-    ></path><path d="M19 11h2m-1 -1v2"></path></svg
+    class="theme-toggle__classic"
+    viewBox="0 0 32 32"
+    style="transition: transform 0.1s cubic-bezier(0.16, 1, 0.3, 1)"
   >
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="1"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="icon icon-tabler icons-tabler-outline icon-tabler-brightness-up dark:hidden inline"
-    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-      d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M12 5l0 -2"
-    ></path><path d="M17 7l1.4 -1.4"></path><path d="M19 12l2 0"></path><path
-      d="M17 17l1.4 1.4"></path><path d="M12 19l0 2"></path><path
-      d="M7 17l-1.4 1.4"></path><path d="M6 12l-2 0"></path><path
-      d="M7 7l-1.4 -1.4"></path></svg
-  >
+    <clipPath id="theme-toggle__classic__cutout">
+      <path d="M0-5h30a1 1 0 0 0 9 13v24H0Z"></path>
+    </clipPath>
+    <g clip-path="url(#theme-toggle__classic__cutout)">
+      <circle cx="16" cy="16" r="9.34"></circle>
+      <g stroke="currentColor" stroke-width="1.5">
+        <path d="M16 5.5v-4"></path>
+        <path d="M16 30.5v-4"></path>
+        <path d="M1.5 16h4"></path>
+        <path d="M26.5 16h4"></path>
+        <path d="m23.4 8.6 2.8-2.8"></path>
+        <path d="m5.7 26.3 2.9-2.9"></path>
+        <path d="m5.8 5.8 2.8 2.8"></path>
+        <path d="m23.4 23.4 2.9 2.9"></path>
+      </g>
+    </g>
+  </svg>
 </button>
 
 <script>
   const themeToggle = document.getElementById('theme-selector');
-  
-  // Function to update theme
-  const updateTheme = (theme) => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
+
+  const updateTheme = async (theme) => {
+    if (typeof window.animateThemeChange === 'function') {
+      await window.animateThemeChange(theme);
+      localStorage.setItem('theme', theme);
     } else {
-      document.documentElement.classList.remove('dark');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      localStorage.setItem('theme', theme);
     }
-    localStorage.setItem('theme', theme);
   };
 
-  // Toggle theme on button click
-  themeToggle?.addEventListener('click', () => {
+  let isProcessing = false;
+  themeToggle?.addEventListener('click', async () => {
+    if (isProcessing) return;
+    isProcessing = true;
+
     const isDark = document.documentElement.classList.contains('dark');
-    updateTheme(isDark ? 'light' : 'dark');
+    await updateTheme(isDark ? 'light' : 'dark');
+
+    // Toggle the theme-toggle--toggled class
+    themeToggle.classList.toggle('theme-toggle--toggled');
+
+    setTimeout(() => {
+      isProcessing = false;
+    }, 100);
   });
 
-  // Listen for system theme changes
+  // Set initial toggle state based on current theme
+  if (document.documentElement.classList.contains('dark')) {
+    themeToggle?.classList.add('theme-toggle--toggled');
+  }
+
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
     if (!localStorage.getItem('theme')) {
       updateTheme(e.matches ? 'dark' : 'light');
+      themeToggle?.classList.toggle('theme-toggle--toggled', e.matches);
     }
   });
 </script>

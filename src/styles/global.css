@@ -8,12 +8,72 @@
   }
 
   body {
-    @apply bg-white dark:bg-black text-darkgrey dark:text-white transition-colors duration-300;
+    @apply text-darkgrey;
     font-family: 'Inter Variable', sans-serif, system-ui;
+    background-color: #fafafa;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  html.dark body {
+    @apply text-white;
+    background-color: #000000;
+  }
+
+  @media (min-width: 768px) {
+    html.dark body {
+      background-image:
+        radial-gradient(at 0% 0%, hsl(280, 93%, 18%) 0, transparent 20%),
+        radial-gradient(at 100% 0%, hsl(61, 93%, 18%) 0, transparent 20%),
+        radial-gradient(at 0% 100%, hsl(136, 93%, 18%) 0, transparent 20%),
+        radial-gradient(at 100% 100%, hsl(217.75, 100%, 17%) 0, transparent 20%);
+    }
+  }
+
+  /* View Transitions */
+  @keyframes reveal-dark {
+    from {
+      clip-path: polygon(50% -71%, -50% 71%, -50% 71%, 50% -71%);
+    }
+    to {
+      clip-path: polygon(50% -71%, -50% 71%, 50% 171%, 171% 50%);
+    }
+  }
+
+  @keyframes reveal-light {
+    from {
+      clip-path: polygon(171% 50%, 50% 171%, 50% 171%, 171% 50%);
+    }
+    to {
+      clip-path: polygon(171% 50%, 50% 171%, -50% 71%, 50% -71%);
+    }
+  }
+
+  ::view-transition-group(root) {
+    animation-duration: 0.7s;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1); /* expo-out */
+  }
+
+  ::view-transition-new(root) {
+    animation-name: reveal-light;
+  }
+
+  ::view-transition-old(root),
+  .dark::view-transition-old(root) {
+    animation: none;
+    z-index: -1;
+  }
+
+  .dark::view-transition-new(root) {
+    animation-name: reveal-dark;
   }
 }
 
 @layer components {
+  .card-bg {
+    @apply bg-white dark:bg-transparent;
+  }
+
   .fade-in {
     @apply opacity-0 animate-fade-in;
   }
@@ -28,27 +88,6 @@
 
   .focus-ring {
     @apply focus:outline-none focus:ring-2 focus:ring-lightblue focus:ring-opacity-50;
-  }
-}
-
-/* Animaciones personalizadas */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
 

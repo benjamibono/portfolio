@@ -5,7 +5,8 @@ import profileImage from '../assets/images/me.webp';
 ---
 
 <div
-  class="rounded-lg border border-border dark:border-darkborder shadow-xs bg-white dark:bg-black"
+  class="rounded-lg border border-border dark:border-darkborder shadow-xs card-bg fade-in"
+  style="animation-delay: 50ms"
 >
   <div class="p-6 pt-6">
     <div class="flex flex-col items-start">
@@ -33,8 +34,9 @@ import profileImage from '../assets/images/me.webp';
         </div>
       </div>
       <p class="my-4 text-start text-sm text-lighttext dark:text-darktext text-balance">
-        Forging my path from business leadership to full-stack developer, +3 years crafting modern web
-        solutions. Driven by discipline and innovation, passionate about solving complex challenges.
+        Forging my path from business leadership to full-stack developer, +3 years crafting modern
+        web solutions. Driven by discipline and innovation, passionate about solving complex
+        challenges.
       </p>
     </div>
     <div class="mt-2 flex flex-row gap-2">
@@ -145,5 +147,8 @@ import profileImage from '../assets/images/me.webp';
 </div>
 
 <script>
-  document.querySelector('a[href="/CV.pdf"]').setAttribute('download', 'CV.pdf');
+  const downloadLink = document.querySelector('a[href="/CV.pdf"]');
+  if (downloadLink) {
+    downloadLink.setAttribute('download', 'CV.pdf');
+  }
 </script>

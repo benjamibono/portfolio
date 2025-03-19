@@ -6,7 +6,7 @@ import Softskills from '../components/softskills.astro';
 ---
 
 <Layout title="About Me - Benjami Bono">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 fade-in delay-100">
     <div class="md:col-span-1">
       <Sidecard />
       <Skills />
@@ -19,13 +19,15 @@ import Softskills from '../components/softskills.astro';
         >
           <div class="space-y-1.5 p-6 flex flex-row justify-between items-baseline">
             <h1
-              class="text-2xl font-semibold leading-none tracking-tight text-black dark:text-white"
+              class="text-2xl font-semibold leading-none tracking-tight text-black dark:text-white slide-up"
+              style="animation-delay: 100ms;"
             >
-              🌟 My Journey 
+              🌟 My Journey
             </h1>
             <a
               href="/"
-              class="text-sm text-lighttext dark:text-darktext hover:underline focus-ring rounded inline-flex items-center"
+              class="text-sm text-lighttext dark:text-darktext hover:underline focus-ring rounded inline-flex items-center fade-in"
+              style="animation-delay: 200ms;"
               aria-label="Back to homepage"
             >
               <svg
@@ -47,7 +49,10 @@ import Softskills from '../components/softskills.astro';
             </a>
           </div>
           <div class="p-6 pt-0">
-            <div class="space-y-6 text-lighttext dark:text-darktext font-light text-balance">
+            <div
+              class="space-y-6 text-lighttext dark:text-darktext font-light text-balance fade-in"
+              style="animation-delay: 300ms;"
+            >
               <h2 class="text-xl font-semibold text-black dark:text-white">Beginnings 🌱</h2>
               <p>
                 From an early age, I was identified as having high IQ, but in my hometown,
@@ -76,7 +81,8 @@ import Softskills from '../components/softskills.astro';
         </div>
 
         <div
-          class="rounded-lg border border-border dark:border-darkborder shadow-sm bg-white dark:bg-black"
+          class="rounded-lg border border-border dark:border-darkborder shadow-sm bg-white dark:bg-black fade-in"
+          style="animation-delay: 400ms;"
         >
           <div class="p-6">
             <div class="space-y-6 text-lighttext dark:text-darktext font-light text-balance">
@@ -110,7 +116,8 @@ import Softskills from '../components/softskills.astro';
         </div>
 
         <div
-          class="rounded-lg border border-border dark:border-darkborder shadow-sm bg-white dark:bg-black"
+          class="rounded-lg border border-border dark:border-darkborder shadow-sm bg-white dark:bg-black fade-in"
+          style="animation-delay: 500ms;"
         >
           <div class="p-6">
             <div class="space-y-6 text-lighttext dark:text-darktext font-light text-balance">
@@ -141,7 +148,8 @@ import Softskills from '../components/softskills.astro';
         </div>
 
         <div
-          class="rounded-lg border border-border dark:border-darkborder shadow-sm bg-white dark:bg-black"
+          class="rounded-lg border border-border dark:border-darkborder shadow-sm bg-white dark:bg-black fade-in"
+          style="animation-delay: 600ms;"
         >
           <div class="p-6">
             <div class="space-y-6 text-lighttext dark:text-darktext font-light text-balance">
@@ -168,7 +176,8 @@ import Softskills from '../components/softskills.astro';
         </div>
 
         <div
-          class="rounded-lg border border-border dark:border-darkborder shadow-sm bg-white dark:bg-black"
+          class="rounded-lg border border-border dark:border-darkborder shadow-sm bg-white dark:bg-black fade-in"
+          style="animation-delay: 700ms;"
         >
           <div class="p-6">
             <div class="space-y-6 text-lighttext dark:text-darktext font-light text-balance">

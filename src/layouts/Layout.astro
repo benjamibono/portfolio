@@ -1,6 +1,7 @@
 ---
 import '@fontsource-variable/inter';
 import SEO from '../components/SEO.astro';
+import '../styles/global.css';
 const { title } = Astro.props;
 ---
 
@@ -14,7 +15,43 @@ const { title } = Astro.props;
     />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/classic.min.css"
+    />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- HTML Meta Tags -->
+    <title>Benjami Bono - Portfolio</title>
+    <meta
+      name="description"
+      content="Front End Developer specializing in modern web technologies."
+    />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://www.benjamibono.dev" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Benjami Bono - Portfolio" />
+    <meta
+      property="og:description"
+      content="Front End Developer specializing in modern web technologies."
+    />
+    <meta property="og:image" content="https://www.benjamibono.dev/_astro/me.Csnmf6YZ_37HV8.webp" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="benjamibono.dev" />
+    <meta property="twitter:url" content="https://www.benjamibono.dev" />
+    <meta name="twitter:title" content="Benjami Bono - Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Front End Developer specializing in modern web technologies."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.benjamibono.dev/_astro/me.Csnmf6YZ_37HV8.webp"
+    />
+
     <SEO title={title} />
     <script is:inline>
       // Check for saved theme preference, otherwise use system preference
@@ -39,12 +76,42 @@ const { title } = Astro.props;
       localStorage.setItem('theme', theme);
     </script>
   </head>
-  <body class="min-h-screen max-w-screen-lg mx-auto px-4 py-8 bg-[#fafafa] dark:bg-[#0a0a0a]">
+  <body class="min-h-screen max-w-screen-lg mx-auto px-4 py-8">
     <slot />
-    <style>
-      body {
-        font-family: 'Inter Variable', sans-serif, system-ui;
-      }
-    </style>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Función para animar el cambio de tema usando View Transitions API
+        async function animateThemeChange(to: 'dark' | 'light') {
+          if (!document.startViewTransition) {
+            // Fallback para navegadores que no soportan View Transitions
+            if (to === 'dark') {
+              document.documentElement.classList.add('dark');
+            } else {
+              document.documentElement.classList.remove('dark');
+            }
+            return;
+          }
+
+          // Usar View Transitions API
+          const transition = document.startViewTransition(() => {
+            if (to === 'dark') {
+              document.documentElement.classList.add('dark');
+            } else {
+              document.documentElement.classList.remove('dark');
+            }
+          });
+
+          try {
+            await transition.finished;
+          } catch (error) {
+            console.error('Error during theme transition:', error);
+          }
+        }
+
+        // Exponer la función globalmente para que el botón de cambio pueda usarla
+        (window as any).animateThemeChange = animateThemeChange;
+      });
+    </script>
   </body>
 </html>
