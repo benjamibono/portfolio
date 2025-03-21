@@ -23,10 +23,10 @@
   html.dark body {
     background-image:
       radial-gradient(at 50% 50%, hsla(174, 100%, 29%, 0.15) 0, transparent 45%),
-      radial-gradient(at 0% 0%, hsla(217, 92%, 34%, 0.2) 0, transparent 35%),
-      radial-gradient(at 100% 0%, hsla(217, 92%, 34%, 0.2) 0, transparent 35%),
-      radial-gradient(at 0% 100%, hsla(217, 92%, 34%, 0.2) 0, transparent 35%),
-      radial-gradient(at 100% 100%, hsla(217, 92%, 34%, 0.2) 0, transparent 35%);
+      radial-gradient(at 0% 0%, hsla(217, 92%, 34%, 0.2) 0, transparent 45%),
+      radial-gradient(at 100% 0%, hsla(217, 92%, 34%, 0.2) 0, transparent 45%),
+      radial-gradient(at 0% 100%, hsla(217, 92%, 34%, 0.2) 0, transparent 45%),
+      radial-gradient(at 100% 100%, hsla(217, 92%, 34%, 0.2) 0, transparent 45%);
     background-color: #000000;
   }
 
