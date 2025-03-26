@@ -2,17 +2,17 @@ import type { Project } from '../types/Project';
 
 export const projects: Project[] = [
   {
+    title: 'NexBuy Ecommerce',
+    description:
+      'Modern e-commerce platform with product catalog, advanced search, secure payments and user management.',
+    url: 'https://ecom-mockup.vercel.app/',
+    technologies: ['Next.js'],
+  },
+  {
     title: 'Ultramarinos El Calvo',
     description:
       "Crafted an easy-to-use, responsive website for a Michelin Star Chef's restaurant, featuring stunning food photography and seamless dining experience.",
     url: 'https://ultramarinoselcalvo.com/',
-    technologies: ['Astro', 'Tailwind'],
-  },
-  {
-    title: 'Dental Barcelo',
-    description:
-      "Transformed a dental clinic's online presence with a modern, user-friendly website that showcases their services and builds patient trust.",
-    url: 'https://www.dentalbarcelo.com/',
     technologies: ['Astro', 'Tailwind'],
   },
   {
@@ -23,18 +23,18 @@ export const projects: Project[] = [
     technologies: ['Next.js'],
   },
   {
+    title: 'Dental Barcelo',
+    description:
+      "Transformed a dental clinic's online presence with a modern, user-friendly website that showcases their services and builds patient trust.",
+    url: 'https://www.dentalbarcelo.com/',
+    technologies: ['Astro', 'Tailwind'],
+  },
+  {
     title: 'Siam May Xerez',
     description:
       '⚠️ Work in progress: Creating a welcoming online space for a neighborhood martial arts gym, helping new students discover Muay Thai and MMA training options.',
     url: 'https://siammay.vercel.app/',
     technologies: ['Astro', 'Tailwind'],
-  },
-  {
-    title: 'NexBuy Ecommerce',
-    description:
-      '⚠️ Work in progress: Modern e-commerce platform with product catalog, advanced search, secure payments and user management.',
-    url: 'https://ecom-mockup.vercel.app/',
-    technologies: ['Next.js'],
   },
   {
     title: 'Nexus Corporate',
