@@ -2,6 +2,27 @@
 
 A modern, responsive portfolio website showcasing my journey from business leadership to full-stack development. Built with Astro and Tailwind CSS for optimal performance and user experience.
 
+<div align="center">
+  <a href="https://astro.build" target="_blank">
+    <img src="https://img.shields.io/badge/Astro-BC52EE?style=for-the-badge&logo=astro&logoColor=white" alt="Astro" />
+  </a>
+  <a href="https://tailwindcss.com" target="_blank">
+    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  </a>
+  <a href="https://vercel.com" target="_blank">
+    <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
+  </a>
+</div>
+
+<br />
+
+<div align="center">
+  <div style="display: flex; justify-content: center; gap: 20px; margin: 40px 0;">
+    <img src="public/preview.webp" alt="Benjami's Portfolio Desktop Version" width="100%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  </div>
+</div>
+
+<br />
 ## 🌟 Features
 
 - **Lightning Fast**: Built with Astro for optimal performance
