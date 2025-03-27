@@ -6,7 +6,8 @@ export const projects: Project[] = [
     description:
       'Modern e-commerce platform with product catalog, advanced search, secure payments and user management.',
     url: 'https://ecom-mockup.vercel.app/',
-    technologies: ['Next.js'],
+    technologies: ['Next.js', 'Tailwind'],
+    image: 'src/assets/images/nexbuy.webp',
   },
   {
     title: 'Ultramarinos El Calvo',
@@ -14,6 +15,7 @@ export const projects: Project[] = [
       "Crafted an easy-to-use, responsive website for a Michelin Star Chef's restaurant, featuring stunning food photography and seamless dining experience.",
     url: 'https://ultramarinoselcalvo.com/',
     technologies: ['Astro', 'Tailwind'],
+    image: 'src/assets/images/calvo.webp',
   },
   {
     title: 'My Study Buddy',
@@ -21,6 +23,7 @@ export const projects: Project[] = [
       'Revolutionized study sessions with AI-powered flashcards and interactive quizzes, making learning more engaging and effective than ever.',
     url: 'https://mystudybuddy.vercel.app/',
     technologies: ['Next.js'],
+    image: 'src/assets/images/study.webp',
   },
   {
     title: 'Dental Barcelo',
@@ -28,13 +31,15 @@ export const projects: Project[] = [
       "Transformed a dental clinic's online presence with a modern, user-friendly website that showcases their services and builds patient trust.",
     url: 'https://www.dentalbarcelo.com/',
     technologies: ['Astro', 'Tailwind'],
+    image: 'src/assets/images/dental.webp',
   },
   {
     title: 'Siam May Xerez',
     description:
-      '⚠️ Work in progress: Creating a welcoming online space for a neighborhood martial arts gym, helping new students discover Muay Thai and MMA training options.',
+      'Created a welcoming online space for a neighborhood martial arts gym, helping new students discover Muay Thai and MMA training options.',
     url: 'https://siammay.vercel.app/',
     technologies: ['Astro', 'Tailwind'],
+    image: 'src/assets/images/thai.webp',
   },
   {
     title: 'Nexus Corporate',
