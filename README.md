@@ -23,6 +23,7 @@ A modern, responsive portfolio website showcasing my journey from business leade
 </div>
 
 <br />
+
 ## 🌟 Features
 
 - **Lightning Fast**: Built with Astro for optimal performance
