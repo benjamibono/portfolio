@@ -30,7 +30,6 @@ jspm_packages/
 *.p12
 
 # Astro specific
-public/
 .cache/
 astro.config.mjs
 
@@ -42,6 +41,3 @@ astro.config.mjs
 
 # Ignore robots.txt
 robots.txt
-
-# Ignore aboutme.astro from pages
-src/pages/aboutme.astro
