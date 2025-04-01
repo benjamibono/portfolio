@@ -4,6 +4,7 @@ import calvoImage from '../assets/images/calvo.webp';
 import studyImage from '../assets/images/study.webp';
 import dentalImage from '../assets/images/dental.webp';
 import thaiImage from '../assets/images/thai.webp';
+import recipeImage from '../assets/images/recipe.webp'
 
 export interface Project {
   title: string;
@@ -15,6 +16,14 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    title: 'Recipe Master',
+    description:
+      "A social platform for sharing cooking and cleaning recipes, inspired by X's dynamics. Users can post, share and discover recipes from others.",
+    url: '/coming-soon',
+    technologies: ['Next.js & Tailwind'],
+    image: recipeImage,
+  },
   {
     title: 'NexBuy Ecommerce',
     description:
@@ -61,14 +70,6 @@ export const projects: Project[] = [
       '⚠️ Work in progress: Modern corporate website mockup with sleek animations and responsive design.',
     url: 'https://nexus-app-gray.vercel.app/',
     technologies: ['React & Tailwind'],
-  },
-  {
-    title: 'HomeCraft Social',
-    description:
-      "A social platform for sharing cooking and cleaning recipes, inspired by X's dynamics. Users can post, share and discover recipes from others.",
-    url: '/coming-soon',
-    technologies: ['React & Tailwind'],
-    isComingSoon: true,
   },
   {
     title: 'Workout Tracker',
