@@ -10,6 +10,7 @@ export interface Project {
   title: string;
   description: string;
   url: string;
+  projectUrl: string;
   technologies: string[];
   image?: ImageMetadata;
   isComingSoon?: boolean;
@@ -20,7 +21,8 @@ export const projects: Project[] = [
     title: 'Recipe Master',
     description:
       "A social platform for sharing cooking and cleaning recipes, inspired by X's dynamics. Users can post, share and discover recipes from others.",
-    url: '/coming-soon',
+    url: 'https://recipe-master-opal.vercel.app/',
+    projectUrl: 'https://github.com/benjamibono/recipe-master',
     technologies: ['Next.js & Tailwind'],
     image: recipeImage,
   },
@@ -29,6 +31,7 @@ export const projects: Project[] = [
     description:
       'Modern e-commerce platform with product catalog, advanced search, secure payments and user management.',
     url: 'https://ecom-mockup.vercel.app/',
+    projectUrl: 'https://github.com/benjamibono/ecommerce',
     technologies: ['Next.js', 'Tailwind'],
     image: nexbuyImage,
   },
@@ -37,6 +40,7 @@ export const projects: Project[] = [
     description:
       "Crafted an easy-to-use, responsive website for a Michelin Star Chef's restaurant, featuring stunning food photography and seamless dining experience.",
     url: 'https://ultramarinoselcalvo.com/',
+    projectUrl: 'https://github.com/benjamibono/ultramarinos-el-calvo',
     technologies: ['Astro', 'Tailwind'],
     image: calvoImage,
   },
@@ -45,6 +49,7 @@ export const projects: Project[] = [
     description:
       'Revolutionized study sessions with AI-powered flashcards and interactive quizzes, making learning more engaging and effective than ever.',
     url: 'https://mystudybuddy.vercel.app/',
+    projectUrl: 'https://github.com/benjamibono/study-buddy',
     technologies: ['Next.js'],
     image: studyImage,
   },
@@ -53,6 +58,7 @@ export const projects: Project[] = [
     description:
       "Transformed a dental clinic's online presence with a modern, user-friendly website that showcases their services and builds patient trust.",
     url: 'https://www.dentalbarcelo.com/',
+    projectUrl: 'https://github.com/benjamibono/dental-barcelo',
     technologies: ['Astro', 'Tailwind'],
     image: dentalImage,
   },
@@ -61,6 +67,7 @@ export const projects: Project[] = [
     description:
       'Created a welcoming online space for a neighborhood martial arts gym, helping new students discover Muay Thai and MMA training options.',
     url: 'https://siammay.vercel.app/',
+    projectUrl: 'https://github.com/benjamibono/siam-may-xerez',
     technologies: ['Astro', 'Tailwind'],
     image: thaiImage,
   },
@@ -69,6 +76,7 @@ export const projects: Project[] = [
     description:
       '⚠️ Work in progress: Modern corporate website mockup with sleek animations and responsive design.',
     url: 'https://nexus-app-gray.vercel.app/',
+    projectUrl: 'https://github.com/benjamibono/nexus-app',
     technologies: ['React & Tailwind'],
   },
   {
@@ -76,6 +84,7 @@ export const projects: Project[] = [
     description:
       'A workout tracking Web App that analyzes your exercise data with AI to provide personalized insights and recommendations.',
     url: '/coming-soon',
+    projectUrl: '/coming-soon',
     technologies: ['Next.js'],
     isComingSoon: true,
   },
