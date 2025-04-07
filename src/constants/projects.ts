@@ -23,7 +23,7 @@ export const projects: Project[] = [
       "A social platform for sharing cooking and cleaning recipes, inspired by X's dynamics. Users can post, share and discover recipes from others.",
     url: 'https://recipe-master-opal.vercel.app/',
     projectUrl: 'https://github.com/benjamibono/recipe-master',
-    technologies: ['Next.js & Tailwind'],
+    technologies: ['Next.js', 'Tailwind'],
     image: recipeImage,
   },
   {
