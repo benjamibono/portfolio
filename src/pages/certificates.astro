@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CertificateCarousel from '../components/CertificateCarousel.astro';
+---
+
+<Layout title="Certificates - Benjami Bono">
+  <main class="container mx-auto px-4 py-8 relative">
+    <a
+      href="/"
+      class="absolute top-2 right-4 p-2 rounded-full hover:bg-border dark:hover:bg-darkborder transition-colors duration-300"
+      aria-label="Close and return to homepage"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="text-black dark:text-white"
+      >
+        <path d="M18 6l-12 12"></path>
+        <path d="M6 6l12 12"></path>
+      </svg>
+    </a>
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-3xl font-bold mb-8 text-black dark:text-white text-center">
+        Certificates
+      </h1>
+      <p class="text-lighttext dark:text-darktext text-center mb-8">
+        As a self-taught developer, I've completed numerous projects, courses, and gained real-world
+        job experience. With the industry becoming increasingly competitive, I've committed to
+        validating my expertise through professional certifications starting with these.
+      </p>
+      <CertificateCarousel />
+    </div>
+  </main>
+</Layout>
