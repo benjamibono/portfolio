@@ -2,7 +2,6 @@
 import { Image } from 'astro:assets';
 import logoImage from '../assets/images/logo.webp';
 import dbImage from '../assets/images/db.webp';
-import tpImage from '../assets/images/tp.webp';
 ---
 
 <div class="pt-6">
@@ -26,10 +25,8 @@ import tpImage from '../assets/images/tp.webp';
           sizes="48px"
         />
         <div>
-          <h3 class="font-semibold text-black dark:text-white">Front End Developer</h3>
-          <p class="text-sm text-lighttext dark:text-darktext">
-            Available for New Opportunities 🇨🇭
-          </p>
+          <h3 class="font-semibold text-black dark:text-white">Frontend Developer</h3>
+          <p class="text-sm text-lighttext dark:text-darktext">Freelance 🇨🇭</p>
         </div>
       </div>
 
@@ -55,16 +52,29 @@ import tpImage from '../assets/images/tp.webp';
           ></path><path d="M16 14h.01"></path><path d="M8 18h.01"></path><path d="M12 18h.01"
           ></path><path d="M16 18h.01"></path></svg
         >
-        April 2020 - Present
+        2020 - Present
       </p>
-      <p class="text-xs mt-2 text-black dark:text-white">
-        Built and optimized 20+ web applications using React, Next.js, and modern technologies.
-        Specialized in creating efficient, scalable solutions for government entities and private
-        businesses. Consistently delivered projects ahead of schedule while maintaining high code
-        quality and user satisfaction.
-      </p>
+      <ul class="text-xs mt-2 text-black dark:text-white list-disc pl-4 space-y-1">
+        <li>
+          Built responsive websites for diverse clients, including a modern e-commerce platform, a
+          Michelin-starred chef, a dental clinic, local businesses, and the city council.
+        </li>
+        <li>
+          Developed dynamic, full-stack web applications for an education academy and the city's
+          public transport website (in development), leveraging React, Next.js, PostgreSQL, and API
+          integrations.
+        </li>
+        <li>
+          Created Recipe Master, a full-stack web app integrating Supabase, real-time features, with
+          authentication, AI-powered nutritional analysis, and responsive UI.
+        </li>
+        <li>
+          Followed Agile/Scrum methodologies, collaborating with partners, clients and stakeholders.
+        </li>
+        <li>Managed the entire project lifecycle from ideation to deployment.</li>
+      </ul>
     </li>
-    <li class="border-b border-border dark:border-darkborder pb-8">
+    <li class="border-border dark:border-darkborder pb-8">
       <div class="flex items-center space-x-4">
         <Image
           src={dbImage}
@@ -79,9 +89,7 @@ import tpImage from '../assets/images/tp.webp';
           sizes="48px"
         />
         <div>
-          <h3 class="font-semibold text-black dark:text-white">
-            Commercial and Administrative Director
-          </h3>
+          <h3 class="font-semibold text-black dark:text-white">CEO</h3>
           <p class="text-sm text-lighttext dark:text-darktext">Dental Barcelo 🇪🇸</p>
         </div>
       </div>
@@ -108,64 +116,22 @@ import tpImage from '../assets/images/tp.webp';
           ></path><path d="M16 14h.01"></path><path d="M8 18h.01"></path><path d="M12 18h.01"
           ></path><path d="M16 18h.01"></path></svg
         >
-        October 2023 - March 2025
+        2023 - 2025
       </p>
-      <p class="text-xs mt-2 text-black dark:text-white">
-        Led comprehensive digital transformation: developed custom web platform, implemented
-        automated scheduling system, and optimized workflows. Achieved 50% reduction in
-        cancellations, 20% increase in new patients, and transformed financial performance from
-        deficit to consistent profitability.
-      </p>
-    </li>
-    <li class="border-border dark:border-darkborder pb-8">
-      <div class="flex items-center space-x-4">
-        <Image
-          src={tpImage}
-          alt="Telepizza's Logo"
-          width={48}
-          height={48}
-          class="rounded-md border border-border dark:border-darkborder shadow-md object-cover size-12"
-          loading="lazy"
-          format="webp"
-          quality={80}
-          densities={[1, 2]}
-          sizes="48px"
-        />
-        <div>
-          <h3 class="font-semibold text-black dark:text-white">Store Manager</h3>
-          <p class="text-sm text-lighttext dark:text-darktext">Telepizza S.A 🇪🇸</p>
-        </div>
-      </div>
-
-      <p class="text-xs text-lighttext dark:text-darktext mt-2 flex items-center my-auto">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="size-3 mr-2 my-auto dark:text-darktext"
-          style=""
-          ><path d="M8 2v4"></path><path d="M16 2v4"></path><rect
-            width="18"
-            height="18"
-            x="3"
-            y="4"
-            rx="2"></rect><path d="M3 10h18"></path><path d="M8 14h.01"></path><path d="M12 14h.01"
-          ></path><path d="M16 14h.01"></path><path d="M8 18h.01"></path><path d="M12 18h.01"
-          ></path><path d="M16 18h.01"></path></svg
-        >
-        January 2019 - October 2023
-      </p>
-      <p class="text-xs mt-2 text-black dark:text-white">
-        Rapidly promoted to manage region's highest-performing store. Supervised team of 25+,
-        optimized operations, and consistently exceeded sales targets. Implemented innovative
-        training programs and operational improvements that became regional standards.
-      </p>
+      <ul class="text-xs mt-2 text-black dark:text-white list-disc pl-4 space-y-1">
+        <li>
+          Led clinic's digital transformation, creating custom website and implementing systems that
+          eliminated waiting times and secured three-week advance bookings.
+        </li>
+        <li>
+          Orchestrated brand renovation and marketing strategy that achieved 200% growth in new
+          patients.
+        </li>
+        <li>
+          Designed inventory and billing solutions that doubled profits through resourceful
+          problem-solving.
+        </li>
+      </ul>
     </li>
   </ul>
 </div>
