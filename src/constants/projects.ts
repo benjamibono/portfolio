@@ -36,6 +36,15 @@ export const projects: Project[] = [
     image: nexbuyImage,
   },
   {
+    title: 'Siam May',
+    description:
+      'A full-stack web application for modern gym management, it offers real-time class scheduling, payment management, user roles and more.',
+    url: 'https://siammay.com/',
+    projectUrl: 'https://github.com/benjamibono/siam-may',
+    technologies: ['Next.js', 'Tailwind'],
+    image: thaiImage,
+  },
+  {
     title: 'Ultramarinos El Calvo',
     description:
       "Crafted an easy-to-use, responsive website for a Michelin Star Chef's restaurant, featuring stunning food photography and seamless dining experience.",
@@ -61,15 +70,6 @@ export const projects: Project[] = [
     projectUrl: 'https://github.com/benjamibono/dental-barcelo',
     technologies: ['Astro', 'Tailwind'],
     image: dentalImage,
-  },
-  {
-    title: 'Siam May Xerez',
-    description:
-      'Created a welcoming online space for a neighborhood martial arts gym, helping new students discover Muay Thai and MMA training options.',
-    url: 'https://siammay.vercel.app/',
-    projectUrl: 'https://github.com/benjamibono/siam-may-xerez',
-    technologies: ['Astro', 'Tailwind'],
-    image: thaiImage,
   },
   {
     title: 'Nexus Corporate',
