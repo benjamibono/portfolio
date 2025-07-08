@@ -45,15 +45,6 @@ export const projects: Project[] = [
     image: thaiImage,
   },
   {
-    title: 'Ultramarinos El Calvo',
-    description:
-      "Crafted an easy-to-use, responsive website for a Michelin Star Chef's restaurant, featuring stunning food photography and seamless dining experience.",
-    url: 'https://ultramarinoselcalvo.com/',
-    projectUrl: 'https://github.com/benjamibono/ultramarinos-el-calvo',
-    technologies: ['Astro', 'Tailwind'],
-    image: calvoImage,
-  },
-  {
     title: 'My Study Buddy',
     description:
       'Revolutionized study sessions with AI-powered flashcards and interactive quizzes, making learning more engaging and effective than ever.',
@@ -61,6 +52,15 @@ export const projects: Project[] = [
     projectUrl: 'https://github.com/benjamibono/study-buddy',
     technologies: ['Next.js'],
     image: studyImage,
+  },
+  {
+    title: 'Ultramarinos El Calvo',
+    description:
+      "Crafted an easy-to-use, responsive website for a Michelin Star Chef's restaurant, featuring stunning food photography and seamless dining experience.",
+    url: 'https://ultramarinoselcalvo.com/',
+    projectUrl: 'https://github.com/benjamibono/ultramarinos-el-calvo',
+    technologies: ['Astro', 'Tailwind'],
+    image: calvoImage,
   },
   {
     title: 'Dental Barcelo',
