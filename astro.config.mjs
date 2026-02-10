@@ -1,18 +1,20 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
   // Configuración de Astro
-  publicDir: 'public', // Asegúrate de que esta configuración esté correcta
-  integrations: [tailwind()],
-  site: 'https://benjaminbono.com',
+  publicDir: 'public',
+  integrations: [sitemap()],
+  site: 'https://benjamibono.dev',
   compressHTML: true,
   build: {
     inlineStylesheets: 'auto',
   },
   vite: {
+    plugins: [tailwindcss()],
     build: {
       cssMinify: true,
       rollupOptions: {

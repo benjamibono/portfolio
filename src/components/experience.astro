@@ -1,32 +1,27 @@
 ---
 import { Image } from 'astro:assets';
 import logoImage from '../assets/images/logo.webp';
-import dbImage from '../assets/images/db.webp';
 ---
 
 <div class="pt-6">
-  <h2 class="text-xl font-bold mb-4 text-black dark:text-white slide-up">Work Experience 💼</h2>
+  <h2 class="text-xl font-bold mb-6 text-black dark:text-white slide-up">Work Experience 💼</h2>
   <ul
-    class="space-y-8 border shadow-sm rounded-lg border-border dark:border-darkborder p-6 card-bg fade-in"
+    class="space-y-8 border shadow-sm rounded-lg border-border dark:border-darkborder p-6 card-bg fade-in mt-2"
     style="animation-delay: 250ms"
   >
     <li class="border-b border-border dark:border-darkborder pb-8">
       <div class="flex items-center space-x-4">
-        <Image
-          src={logoImage}
-          alt="Benjami Bono's Logo"
-          width={48}
-          height={48}
-          class="rounded-md border border-border dark:border-darkborder shadow-md object-cover size-12"
+        <img
+          src="/21impact-logo.svg"
+          alt="21 Impact Labs Logo"
+          width="48"
+          height="48"
+          class="rounded-md border border-border dark:border-darkborder shadow-md object-contain size-12 bg-darkgrey dark:bg-darkgrey p-1"
           loading="lazy"
-          format="webp"
-          quality={80}
-          densities={[1, 2]}
-          sizes="48px"
         />
         <div>
-          <h3 class="font-semibold text-black dark:text-white">Full Stack Developer</h3>
-          <p class="text-sm text-lighttext dark:text-darktext">Lemon.io 🇪🇺</p>
+          <h3 class="font-semibold text-black dark:text-white">Tech Lead, Software Engineer (Full Stack)</h3>
+          <p class="text-sm text-lighttext dark:text-darktext">21 Impact Labs 🇨🇭</p>
         </div>
       </div>
 
@@ -52,7 +47,75 @@ import dbImage from '../assets/images/db.webp';
           ></path><path d="M16 14h.01"></path><path d="M8 18h.01"></path><path d="M12 18h.01"
           ></path><path d="M16 18h.01"></path></svg
         >
-        2020 - Present
+        September 2025 - Present
+      </p>
+      <ul class="text-xs mt-2 text-black dark:text-white list-disc pl-4 space-y-1">
+        <li>
+          Tech lead for the xponetiq Premium web platform, owning end-to-end delivery across frontend, backend, and AWS operations.
+        </li>
+        <li>
+          Led MVP execution under aggressive timelines, translating product requirements into technical plans, estimates, and sprint delivery routines.
+        </li>
+        <li>
+          Implemented the full Brain Health Index experience: new API integration, assessment user flows, results experience, and reliability improvements.
+        </li>
+        <li>
+          Delivered the coaching booking product across frontend and backend, including scheduling integration and user flows.
+        </li>
+        <li>
+          Built and shipped core platform features including authentication and access control, subscription and billing flows, and member lifecycle communications.
+        </li>
+        <li>
+          Owned production readiness and reliability: CI/CD pipelines, deployments, environment configuration, AWS access management, and monitoring.
+        </li>
+        <li>
+          Partnered with Product and leadership to refine scope, prioritize work, and unblock delivery, while providing technical oversight for the external iOS team.
+        </li>
+      </ul>
+    </li>
+    <li class="border-b border-border dark:border-darkborder pb-8">
+      <div class="flex items-center space-x-4">
+        <Image
+          src={logoImage}
+          alt="Benjami Bono's Logo"
+          width={48}
+          height={48}
+          class="rounded-md border border-border dark:border-darkborder shadow-md object-cover size-12"
+          loading="lazy"
+          format="webp"
+          quality={80}
+          densities={[1, 2]}
+          sizes="48px"
+        />
+        <div>
+          <h3 class="font-semibold text-black dark:text-white">Full Stack Developer</h3>
+          <p class="text-sm text-lighttext dark:text-darktext">Freelancer 🌍</p>
+        </div>
+      </div>
+
+      <p class="text-xs text-lighttext dark:text-darktext mt-2 flex items-center my-auto">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="size-3 mr-2 my-auto dark:text-darktext"
+          style=""
+          ><path d="M8 2v4"></path><path d="M16 2v4"></path><rect
+            width="18"
+            height="18"
+            x="3"
+            y="4"
+            rx="2"></rect><path d="M3 10h18"></path><path d="M8 14h.01"></path><path d="M12 14h.01"
+          ></path><path d="M16 14h.01"></path><path d="M8 18h.01"></path><path d="M12 18h.01"
+          ></path><path d="M16 18h.01"></path></svg
+        >
+        2020 - 2025
       </p>
       <ul class="text-xs mt-2 text-black dark:text-white list-disc pl-4 space-y-1">
         <li>
@@ -70,67 +133,6 @@ import dbImage from '../assets/images/db.webp';
           Followed Scrum / Kanban (Agile), collaborating with product teams, designers, and stakeholders.
         </li>
         <li>Led projects end-to-end wearing many hats: requirements, dev, testing, deployment.</li>
-      </ul>
-    </li>
-    <li class="border-border dark:border-darkborder pb-8">
-      <div class="flex items-center space-x-4">
-        <Image
-          src={dbImage}
-          alt="Dental Barcelo's Logo"
-          width={48}
-          height={48}
-          class="rounded-md border border-border dark:border-darkborder shadow-md object-cover size-12"
-          loading="lazy"
-          format="webp"
-          quality={80}
-          densities={[1, 2]}
-          sizes="48px"
-        />
-        <div>
-          <h3 class="font-semibold text-black dark:text-white">Full Stack Developer & Digital Consultant</h3>
-          <p class="text-sm text-lighttext dark:text-darktext">Dental Barcelo 🇪🇸</p>
-        </div>
-      </div>
-
-      <p class="text-xs text-lighttext dark:text-darktext mt-2 flex items-center my-auto">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="size-3 mr-2 my-auto dark:text-darktext"
-          style=""
-          ><path d="M8 2v4"></path><path d="M16 2v4"></path><rect
-            width="18"
-            height="18"
-            x="3"
-            y="4"
-            rx="2"></rect><path d="M3 10h18"></path><path d="M8 14h.01"></path><path d="M12 14h.01"
-          ></path><path d="M16 14h.01"></path><path d="M8 18h.01"></path><path d="M12 18h.01"
-          ></path><path d="M16 18h.01"></path></svg
-        >
-        2023 - 2025
-      </p>
-      <ul class="text-xs mt-2 text-black dark:text-white list-disc pl-4 space-y-1">
-        <li>
-          Led the clinic's digital transformation: custom website, appointment system, and internal tools;
-          using Next.js, Node, Astro and PostgreSQL.
-        </li>
-        <li>
-          Designed and developed inventory and billing apps that optimized operations and
-          increased profitability by 80%
-        </li>
-        <li>
-          Contributed to rebranding and digital strategy, doubling patient intake.
-        </li>
-        <li>
-          Acted as technical lead, working closely with management and staff to integrate new systems.
-        </li>
       </ul>
     </li>
   </ul>

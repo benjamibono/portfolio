@@ -1,38 +1,46 @@
 ---
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import { Image } from 'astro:assets';
 ---
 
 <div class="w-full max-w-4xl mx-auto p-4 fade-in" style="animation-delay: 100ms">
-  <div class="swiper certificate-carousel">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
+  <div class="carousel-container relative">
+    <div
+      class="carousel-track flex overflow-x-auto snap-x snap-mandatory scroll-smooth gap-4 scrollbar-hide"
+      id="carousel-track"
+    >
+      <div class="carousel-slide flex-shrink-0 w-full snap-center">
         <div
           class="relative aspect-[4/3] rounded-lg overflow-hidden border border-border dark:border-darkborder"
         >
-          <img
+          <Image
             src="/certificates/Responsive-Web-Design.webp"
             alt="Responsive Web Design Certificate"
             class="object-contain w-full h-full"
-            loading="lazy"
+            width={800}
+            height={600}
+            loading="eager"
+            format="webp"
+            quality={90}
           />
         </div>
       </div>
-      <div class="swiper-slide">
+      <div class="carousel-slide flex-shrink-0 w-full snap-center">
         <div
           class="relative aspect-[4/3] rounded-lg overflow-hidden border border-border dark:border-darkborder"
         >
-          <img
+          <Image
             src="/certificates/Algorithms-DataStructures.webp"
             alt="Algorithms & Data Structures Certificate"
             class="object-contain w-full h-full"
+            width={800}
+            height={600}
             loading="lazy"
+            format="webp"
+            quality={90}
           />
         </div>
       </div>
-      <div class="swiper-slide">
+      <div class="carousel-slide flex-shrink-0 w-full snap-center">
         <div
           class="relative aspect-[4/3] rounded-lg overflow-hidden border border-border dark:border-darkborder bg-white dark:bg-darkgrey flex flex-col items-center justify-center p-8 text-center"
         >
@@ -64,7 +72,7 @@ import 'swiper/css/pagination';
             href="/certificates/Full-Stack.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 bg-black dark:bg-white text-white dark:text-darkgrey px-4 py-2 rounded-lg hover:bg-darkborder hover:dark:bg-[#ffffff] transition duration-300"
+            class="inline-flex items-center gap-2 bg-black dark:bg-white text-white dark:text-darkgrey px-4 py-2 rounded-lg hover:bg-darkborder hover:dark:bg-white transition duration-300"
             aria-label="Download Full Stack Development Certificate"
           >
             <svg
@@ -87,79 +95,148 @@ import 'swiper/css/pagination';
         </div>
       </div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
+
+    <!-- Navigation Buttons -->
+    <button
+      class="carousel-button carousel-button-prev absolute left-2 top-1/2 -translate-y-1/2 bg-white dark:bg-black bg-opacity-80 dark:bg-opacity-80 text-black dark:text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:bg-opacity-100 transition z-10"
+      aria-label="Previous certificate"
+      id="prev-btn"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    <button
+      class="carousel-button carousel-button-next absolute right-2 top-1/2 -translate-y-1/2 bg-white dark:bg-black bg-opacity-80 dark:bg-opacity-80 text-black dark:text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:bg-opacity-100 transition z-10"
+      aria-label="Next certificate"
+      id="next-btn"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+
+    <!-- Pagination Dots -->
+    <div class="carousel-pagination flex justify-center gap-2 mt-4" id="pagination">
+      <button
+        class="pagination-dot w-2 h-2 rounded-full bg-black dark:bg-white transition"
+        data-index="0"
+        aria-label="Go to certificate 1"
+      ></button>
+      <button
+        class="pagination-dot w-2 h-2 rounded-full bg-black dark:bg-white opacity-30 transition"
+        data-index="1"
+        aria-label="Go to certificate 2"
+      ></button>
+      <button
+        class="pagination-dot w-2 h-2 rounded-full bg-black dark:bg-white opacity-30 transition"
+        data-index="2"
+        aria-label="Go to certificate 3"
+      ></button>
+    </div>
   </div>
 </div>
 
 <script>
-  import Swiper from 'swiper';
-  import { Navigation, Pagination, A11y } from 'swiper/modules';
+  const track = document.getElementById('carousel-track');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  const dots = document.querySelectorAll('.pagination-dot');
+  let currentIndex = 0;
+  const totalSlides = 3;
 
-  const initSwiper = () => {
-    const swiper = new Swiper('.certificate-carousel', {
-      modules: [Navigation, Pagination, A11y],
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      a11y: {
-        prevSlideMessage: 'Previous certificate',
-        nextSlideMessage: 'Next certificate',
-        firstSlideMessage: 'This is the first certificate',
-        lastSlideMessage: 'This is the last certificate',
-      },
+  function scrollToSlide(index: number) {
+    if (!track) return;
+    const slideWidth = track.offsetWidth;
+    track.scrollTo({
+      left: slideWidth * index,
+      behavior: 'smooth',
     });
-  };
-
-  // Initialize Swiper
-  if (document.readyState === 'complete') {
-    initSwiper();
-  } else {
-    document.addEventListener('DOMContentLoaded', initSwiper);
+    currentIndex = index;
+    updatePagination();
   }
+
+  function updatePagination() {
+    dots.forEach((dot, i) => {
+      if (i === currentIndex) {
+        dot.classList.remove('opacity-30');
+        dot.classList.add('opacity-100');
+      } else {
+        dot.classList.remove('opacity-100');
+        dot.classList.add('opacity-30');
+      }
+    });
+  }
+
+  prevBtn?.addEventListener('click', () => {
+    const newIndex = currentIndex === 0 ? totalSlides - 1 : currentIndex - 1;
+    scrollToSlide(newIndex);
+  });
+
+  nextBtn?.addEventListener('click', () => {
+    const newIndex = currentIndex === totalSlides - 1 ? 0 : currentIndex + 1;
+    scrollToSlide(newIndex);
+  });
+
+  dots.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      const index = parseInt(dot.getAttribute('data-index') || '0');
+      scrollToSlide(index);
+    });
+  });
+
+  // Keyboard navigation
+  track?.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+      prevBtn?.click();
+    } else if (e.key === 'ArrowRight') {
+      nextBtn?.click();
+    }
+  });
+
+  // Update pagination on scroll
+  track?.addEventListener('scroll', () => {
+    if (!track) return;
+    const slideWidth = track.offsetWidth;
+    const newIndex = Math.round(track.scrollLeft / slideWidth);
+    if (newIndex !== currentIndex) {
+      currentIndex = newIndex;
+      updatePagination();
+    }
+  });
 </script>
 
-<style is:global>
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: theme('colors.black') !important;
-    background-color: rgba(255, 255, 255, 0.8) !important;
-    width: 40px !important;
-    height: 40px !important;
-    border-radius: 50% !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+<style>
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
-  .swiper-button-next::after,
-  .swiper-button-prev::after {
-    font-size: 20px !important;
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 
-  .dark .swiper-button-next,
-  .dark .swiper-button-prev {
-    color: theme('colors.white') !important;
-    background-color: rgba(0, 0, 0, 0.8) !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
-  }
-
-  .swiper-pagination-bullet {
-    background: theme('colors.black') !important;
-  }
-
-  .dark .swiper-pagination-bullet {
-    background: theme('colors.white') !important;
-  }
-
-  .swiper-pagination-bullet-active {
-    background: theme('colors.purple') !important;
+  .pagination-dot.opacity-100 {
+    background-color: var(--color-purple);
   }
 </style>

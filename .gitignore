@@ -31,7 +31,6 @@ jspm_packages/
 
 # Astro specific
 .cache/
-astro.config.mjs
 
 # generated types
 .astro/
@@ -39,5 +38,6 @@ astro.config.mjs
 # jetbrains setting folder
 .idea/
 
-# Ignore robots.txt
-robots.txt
+screenshots/
+*.backup
+*.bak

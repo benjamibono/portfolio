@@ -1,17 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Sidecard from '../components/sidecard.astro';
-import Skills from '../components/skills.astro';
-import Softskills from '../components/softskills.astro';
-import Education from '../components/education.astro';
+import SideCard from '../components/SideCard.astro';
+import Skills from '../components/Skills.astro';
+import SoftSkills from '../components/SoftSkills.astro';
+import Education from '../components/Education.astro';
 ---
 
 <Layout title="About Me - Benjami Bono">
+  <main id="main-content">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6 fade-in delay-100">
     <div class="md:col-span-1">
-      <Sidecard />
+      <SideCard />
       <Skills />
-      <Softskills />
+      <SoftSkills />
     </div>
     <div class="md:col-span-2">
       <div class="space-y-6">
@@ -52,28 +53,17 @@ import Education from '../components/education.astro';
               class="space-y-6 text-lighttext dark:text-darktext font-light text-balance fade-in"
               style="animation-delay: 300ms;"
             >
-              <h2 class="text-xl font-semibold text-black dark:text-white">Beginnings 🌱</h2>
+              <h2 class="text-xl font-semibold text-black dark:text-white">Early Years 🌱</h2>
               <p>
-                From an early age, I was identified as having high IQ, but in my hometown,
-                opportunities were very limited. I was an excellent student in high school, but upon
-                graduating, I felt lost and directionless, with no one to guide me. Facing
-                uncertainty and limited opportunities in my city, I decided to try my luck in
-                Switzerland, where my father had been living, working, and happily married (now a
-                Swiss citizen) for years.
+                I grew up in Spain with a natural aptitude for learning and problem-solving. After high school, 
+                I explored Switzerland—where my father had built his life—and immediately connected with the 
+                culture of precision, innovation, and quality. The landscapes, the work ethic, and the 
+                international environment felt like home.
               </p>
               <p>
-                I felt it was where I belonged: security, opportunities, spectacular landscapes, and
-                gorgeous cities. I fell in love with snowboarding and, above all, with the culture
-                of work, effort, and social life, where others are respected and cared for. However,
-                I needed a degree and something to dedicate myself to. At that time, I didn't master
-                German well, and although I worked as an au pair and in temporary employment, I
-                wouldn't be able to fulfill myself or prosper professionally.
-              </p>
-              <p>
-                I returned to Spain and studied Business Administration and Finance, but I didn't
-                feel fulfilled with it. I also tried Economics and E-commerce, searching for
-                direction, but I still hadn't found my passion. It was during this time that I began
-                to shape my professional path through hands-on experience.
+                I pursued Business Administration and Finance, then Economics and E-commerce, gaining valuable 
+                business acumen. But I was searching for something more technical, more creative, more impactful. 
+                I needed to find where my analytical mind and drive for excellence could truly shine.
               </p>
             </div>
           </div>
@@ -86,26 +76,17 @@ import Education from '../components/education.astro';
           <div class="p-6">
             <div class="space-y-6 text-lighttext dark:text-darktext font-light text-balance">
               <h2 class="text-xl font-semibold text-black dark:text-white">
-                Professional Growth 📈
+                Building Business Acumen 📈
               </h2>
               <p>
-                                 At that point, I considered returning to Switzerland, but I needed financial independence. 
-                 Rather than depending on anyone, I entered the hospitality industry with determination. 
-                 During my probation period, I was already made permanent, and within months, I went from 
-                 delivery driver to managing the largest store in the area, transforming it into the most 
-                 profitable location in the entire country.
+                Before discovering programming, I honed my leadership and operational skills in the real world. 
+                I entered the hospitality industry and quickly progressed from delivery driver to managing the 
+                largest store in the region, transforming it into the most profitable location in the country.
               </p>
               <p>
-                                 This success opened doors. A family contact offered me a position at a struggling dental clinic 
-                 that needed <strong>everything</strong>: aesthetic renovation, a modern website, inventory management, 
-                 better organization, streamlined scheduling, and billing systems, all on a shoestring budget. 
-                 It was an enormous challenge for someone so young, but I knew I had the vision and tenacity to succeed.
-              </p>
-              <p>
-                The transformation was remarkable. By March 2025, when I trained my successor, we had achieved 
-                the impossible: turned a failing clinic into a thriving business with full schedules booked 
-                3 weeks in advance, a perfect 5/5 Google rating, streamlined operations, significantly higher 
-                profits, and a completely renewed image. <strong>We didn't just save the clinic—we revolutionized it.</strong>
+                This experience taught me how to drive results under pressure, optimize operations, lead teams, 
+                and deliver measurable business impact. I learned that success comes from combining strategic 
+                thinking with hands-on execution—lessons that now inform how I approach technical leadership.
               </p>
             </div>
           </div>
@@ -118,27 +99,23 @@ import Education from '../components/education.astro';
           <div class="p-6">
             <div class="space-y-6 text-lighttext dark:text-darktext font-light text-balance">
               <h2 class="text-xl font-semibold text-black dark:text-white">
-                Discovery of Programming 💻
+                Transition to Tech 💻
               </h2>
               <p>
-                                 <strong>The moment everything changed.</strong> What started as curiosity in April 2020 became 
-                 an obsession. I began accepting programming projects to supplement my income, working weekends 
-                 and holidays. But this wasn't just work: <em>this was my calling</em>. Time became irrelevant 
-                 when I was coding. I was creating solutions that genuinely helped people, and they valued what I built.
+                In April 2020, I discovered programming. What started as curiosity quickly became a passion. 
+                I taught myself Python, JavaScript, React, TypeScript, and modern web technologies through 
+                intensive self-study—Codecademy, YouTube, Scrimba, and LeetCode became my university.
               </p>
               <p>
-                                 My learning journey was intense and self-directed: Python first, then HTML/CSS/JavaScript, 
-                 followed by React, TypeScript, and Tailwind. I mastered SQL, Git, Node.js, Next.js, Figma, 
-                 and Docker. Each technology was a new mountain to climb, and I loved every challenge. 
-                 <strong>Codecademy and YouTube for theory, Scrimba and LeetCode for practice.</strong> I was 
-                 completely autodidactic and thrived on it.
+                Within months, I was building production applications for clients. I delivered 20+ full-stack 
+                projects—from e-commerce platforms to AI-powered apps—each one pushing my technical boundaries. 
+                I learned to ship fast, iterate based on feedback, and deliver real business value.
               </p>
               <p>
-                                 Today, I'm at my peak performance. While I'm still growing, the combination of modern tools 
-                 and AI has exponentially accelerated my capabilities. Problems that once took weeks now take 
-                 days through strategic planning and focused execution. My portfolio spans from public GitHub 
-                 projects to confidential work for government entities and private corporations. 
-                 <strong>Each project is a testament to continuous evolution.</strong>
+                By 2025, I had proven myself as a full-stack developer capable of handling complex projects 
+                independently. This track record led to my current role as Tech Lead at 21 Impact Labs, where 
+                I now lead platform development, mentor engineers, and drive technical strategy for a health-tech 
+                startup in Zurich.
               </p>
             </div>
           </div>
@@ -151,21 +128,23 @@ import Education from '../components/education.astro';
           <div class="p-6">
             <div class="space-y-6 text-lighttext dark:text-darktext font-light text-balance">
               <h2 class="text-xl font-semibold text-black dark:text-white">
-                Skills & Languages 🌍
+                Technical Leadership Today 🚀
               </h2>
               <p>
-                My multilingual abilities set me apart: I'm fluent in Spanish, Catalan, and English,
-                with good French and German, though the latter is my priority as it's the language
-                of business and key to my career. This linguistic diversity, combined with strong
-                communication skills, enables effective collaboration in international environments.
+                As Tech Lead at 21 Impact Labs, I own the full technical lifecycle of the xponetiq Premium 
+                platform—from architecture decisions to production deployments. I lead MVP execution, coordinate 
+                with product and iOS teams, manage AWS infrastructure, and ensure delivery quality through CI/CD 
+                pipelines and monitoring.
               </p>
               <p>
-                I've always been good at communication, my charisma and extroversion, and my passion
-                for reading have led me to leadership roles in sports, studies, and work. Beyond
-                technical expertise, I bring a relentless drive for learning and problem-solving. My
-                experience in leadership roles has honed my ability to inspire and guide teams and
-                colleagues toward success. I thrive in challenging environments and maintain a
-                disciplined approach to achieving goals.
+                My multilingual abilities (Spanish, Catalan, English, German, French, Italian) enable seamless 
+                collaboration in international teams. I combine technical depth with business acumen, translating 
+                product requirements into executable technical plans while mentoring engineers and unblocking delivery.
+              </p>
+              <p>
+                I thrive in fast-paced environments where I can drive both technical excellence and business impact. 
+                Whether it's architecting scalable systems, optimizing team workflows, or shipping features under 
+                tight deadlines, I deliver results.
               </p>
             </div>
           </div>
@@ -177,27 +156,21 @@ import Education from '../components/education.astro';
         >
           <div class="p-6">
             <div class="space-y-6 text-lighttext dark:text-darktext font-light text-balance">
-              <h2 class="text-xl font-semibold text-black dark:text-white">Why Switzerland 🏔️</h2>
+              <h2 class="text-xl font-semibold text-black dark:text-white">What Drives Me 🎯</h2>
               <p>
-                                 Switzerland isn't just a destination for me: <strong>it's home</strong>. From the moment I first 
-                 arrived, I knew I belonged here. The culture of precision, excellence, and respect resonates 
-                 deeply with my values. I fell in love with the spectacular landscapes, the work ethic, and 
-                 the way people genuinely care for one another. Following my father's footsteps, who became 
-                 a Swiss citizen through dedication and hard work, I'm ready to build my own legacy here.
+                I'm motivated by complex technical challenges and the opportunity to create meaningful impact. 
+                Whether it's architecting a new platform feature, optimizing system performance, or mentoring 
+                junior engineers, I approach every challenge with strategic thinking and execution excellence.
               </p>
               <p>
-                <strong>This is where I want to start a family with my partner.</strong> This is where I want 
-                to contribute to innovative projects that matter. This is where I want to apply my discipline 
-                and ambition to create something meaningful. Switzerland offers the perfect environment for 
-                continuous growth—whether mastering new programming languages, optimizing system architectures, 
-                or crafting exceptional user experiences.
+                My background in business operations gives me a unique perspective—I don't just build features, 
+                I build solutions that drive business outcomes. I understand stakeholder needs, can translate 
+                requirements into technical plans, and deliver on aggressive timelines without compromising quality.
               </p>
               <p>
-                <strong>My track record speaks for itself:</strong> I've succeeded in everything I've committed 
-                to—sports, studies, business transformation, and now technology. I don't just complete projects; 
-                I exceed expectations. I'm not just looking for a job; I'm seeking the opportunity to maximize 
-                my potential and contribute to something greater than myself. 
-                <em>Give me that chance, and I'll prove that discipline and ambition can move mountains.</em>
+                Based in Zurich, I'm fortunate to work at the intersection of health-tech and innovation. 
+                I'm always interested in connecting with other technical leaders, exploring new opportunities, 
+                and contributing to projects that push the boundaries of what's possible.
               </p>
             </div>
           </div>
@@ -205,4 +178,5 @@ import Education from '../components/education.astro';
       </div>
     </div>
   </div>
+  </main>
 </Layout>

@@ -1,7 +1,9 @@
 ---
 import '@fontsource-variable/inter';
 import SEO from '../components/SEO.astro';
+import SkipLink from '../components/SkipLink.astro';
 import '../styles/global.css';
+import '../styles/theme-toggles.min.css';
 const { title } = Astro.props;
 ---
 
@@ -10,44 +12,12 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta
-      name="This is Benjami Bono's portfolio where I broadcast all my projects, experience, some info about me and social media links."
-      content="Benjami Bono Portfolio"
+      name="description"
+      content="This is Benjami Bono's portfolio where I broadcast all my projects, experience, some info about me and social media links."
     />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/classic.min.css"
-    />
     <meta name="generator" content={Astro.generator} />
-
-    <!-- HTML Meta Tags -->
-    <title>Benjami Bono - Portfolio</title>
-    <meta
-      name="description"
-      content="Front-End Developer specializing in React, Next.js, and modern web technologies to craft seamless and high-performance user experiences."
-    />
-
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://www.benjamibono.dev" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Benjami Bono - Portfolio" />
-    <meta
-      property="og:description"
-      content="Front-End Developer specializing in React, Next.js, and modern web technologies to craft seamless and high-performance user experiences."
-    />
-    <meta property="og:image" content="https://www.benjamibono.dev/favicon.svg" />
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content="benjamibono.dev" />
-    <meta property="twitter:url" content="https://www.benjamibono.dev" />
-    <meta name="twitter:title" content="Benjami Bono - Portfolio" />
-    <meta
-      name="twitter:description"
-      content="Front-End Developer specializing in React, Next.js, and modern web technologies to craft seamless and high-performance user experiences."
-    />
-    <meta name="twitter:image" content="https://www.benjamibono.dev/favicon.svg" />
 
     <SEO title={title} />
     <script is:inline>
@@ -74,6 +44,7 @@ const { title } = Astro.props;
     </script>
   </head>
   <body class="min-h-screen max-w-screen-lg mx-auto px-4 py-8">
+    <SkipLink href="#main-content" />
     <slot />
 
     <script>
@@ -107,7 +78,7 @@ const { title } = Astro.props;
         }
 
         // Exponer la función globalmente para que el botón de cambio pueda usarla
-        (window as any).animateThemeChange = animateThemeChange;
+        window.animateThemeChange = animateThemeChange;
       });
     </script>
   </body>

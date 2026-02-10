@@ -1,16 +1,17 @@
 export const siteMetadata = {
   title: 'Benjami Bono - Portfolio',
-  description: 'Front End Developer specializing in modern web technologies.',
-  siteUrl: 'https://benjaminbono.dev',
+  description:
+    'Tech Lead and Full Stack Developer specializing in React, Next.js, and modern web technologies to craft seamless and high-performance user experiences.',
+  siteUrl: 'https://benjamibono.dev',
   language: 'en-CH',
   locale: 'en_CH',
-  socialImage: '/images/me.webp',
+  socialImage: '/preview.webp',
   email: 'benjamibono@gmail.com',
   github: 'https://github.com/benjamibono',
   linkedin: 'https://linkedin.com/in/benjamibono',
   author: {
     name: 'Benjami Bono',
-    bio: 'Front End Developer',
+    bio: 'Tech Lead & Full Stack Developer',
     avatar: '/images/me.webp',
   },
 };

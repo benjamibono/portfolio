@@ -14,6 +14,9 @@ const {
   image = siteMetadata.socialImage,
   canonicalUrl = siteMetadata.siteUrl,
 } = Astro.props;
+
+// Ensure image is an absolute URL
+const absoluteImage = image.startsWith('http') ? image : `${siteMetadata.siteUrl}${image}`;
 ---
 
 <!-- SEO -->
@@ -26,19 +29,48 @@ const {
 <meta property="og:url" content={canonicalUrl} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={image} />
+<meta property="og:image" content={absoluteImage} />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:url" content={canonicalUrl} />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={image} />
-
-<!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="twitter:image" content={absoluteImage} />
 
 
 <!-- Theme Color -->
 <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Benjami Bono',
+  url: siteMetadata.siteUrl,
+  image: `${siteMetadata.siteUrl}${siteMetadata.socialImage}`,
+  jobTitle: 'Full Stack Developer',
+  worksFor: {
+    '@type': 'Organization',
+    name: '21 Impact Labs'
+  },
+  sameAs: [
+    siteMetadata.github,
+    siteMetadata.linkedin
+  ],
+  email: siteMetadata.email,
+  description: siteMetadata.description
+})} />
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: siteMetadata.title,
+  url: siteMetadata.siteUrl,
+  description: siteMetadata.description,
+  author: {
+    '@type': 'Person',
+    name: 'Benjami Bono'
+  }
+})} />
