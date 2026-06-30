@@ -19,8 +19,10 @@ export default defineConfig({
       cssMinify: true,
       rollupOptions: {
         output: {
-          manualChunks: {
-            'inter-font': ['@fontsource-variable/inter'],
+          manualChunks(id) {
+            if (id.includes('@fontsource-variable/inter')) {
+              return 'inter-font';
+            }
           },
         },
       },
